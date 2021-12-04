@@ -1,0 +1,24 @@
+Types:
+- Wood
+- Fire
+- Water
+- Earth
+- Metal
+
+Effectivenesses: based on rock-paper-scissors-lizard-Spock. For the effectivenesses chart, see the image SuperEffectiveMoves, which shows which type is super effective (2x damage) against which type. For reverse, weakly effective (0.5x damage), reverse the chart (for example, Fire is super effective against Metal while Metal is weakly effective against Fire. Types that aren't weakly effective or super effective have normal effectiveness (1x damage).
+
+Move categories:
+- Non-damaging: Comparable to Pokémon's Status moves, which affect e.g. stats or types or inflict status conditions.
+- Damaging: Attack moves that deal damage.
+
+The battles are turn-based, one-on-one. The battle ends when one trainer is out of Devozi (or the player chooses to forfeit). Each turn, one can either command their Devoz to make a move, use an item or attempt to flee/forfeit (the former for a battle against wild Devozi and the latter for trainer battles). Flee attempts can always fail and thus use the turn while forfeits only fail against criminals (and also use the turn). Upon forfeiting, the player is treated like they lost the battle the normal way (= all Devozi are out of HP). Forfeiting is not present in Pokémon games (at least in the mainline), but I am adding it as a quality of life improvement for battles the player is certain they're going to lose anyway and could save time by forfeiting.
+
+Devozi have four stats: HP, Attack, Defense and Speed. This is a slightly simpler version of the stat system that existed in the first Pokémon games, which also included a Special stat for calculating damage from using and being hit by special attacks (also absent in this game for the sake of simplicity).
+
+Moves have four attributes: Type, Power, Uses and Accuracy. Type determines the type of the move, which is taken into account while calculating damage. Power determines the base damage used for calculating the damage. Uses shows how many uses the Devoz has left for the move (similar to PP in Pokémon), which can be replenished with certain healing items or fully healing it. Accuracy determines the likelyhood of the move hitting the target.
+
+Status conditions are bad effects that can be inflicted by certain non-damaging moves. They can be healed with certain healing items and by fully healing the Devoz. The status conditions to be implemented in the game are:
+- Stuck: Similar to Paralysis in Pokémon, the afflicted Devoz suffers from a Speed drop and may be unable to move, using the turn without doing anything. Inflicted by Wood and Earth types.
+- Burned: Like in Pokémon, the afflicted Devoz suffers from an Attack drop and is damaged at the end of each turn (1/16 of their total HP). Inflicted by Fire types.
+- Poisoned: Like in Pokémon, the afflicted Devoz loses 1/16 of its total HP each turn. Inflicted by Metal types. Why? Because heavy metal poisoning is a thing.
+- Waterlogged: A mixture of Pokémon's Sleep and Frozen status conditions. The afflicted Devoz is unable to move for up to 5 turns. Each turn, it has a 20% chance to shake off enough water to be able to move again properly. Inflicted by Water types.
