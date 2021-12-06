@@ -1,0 +1,62 @@
+There are multiple tiers which depict the status of the Devozi in the world.
+
+Legend Tier - Devozi only spoken of in myths or rumors. The existence of some is questionable at best while others have been spotted before.
+
+Smoke Phantom: An obscure Fire-type Devozi that has been said to live in the Lacona volcano. The only substantial evidence that there is something are the images of blurry, shadowy being that have been taken. Until proper sightings have been made, this rumored Devoz has been dubbed Smoke Phantom.
+
+Regenesys: An imposing, robot-like legendary Metal-type Devoz who is said to have been a major factor in ending the war that ravaged the Chanphos region and establishing Regenesys City, which was named after it. It stayed in the city as a guardian for several decades before taking off one day and disappearing. Many statues of it were built to Regenesys City as tributes and as symbolic guardians. Nowadays, it is seen as more of a myth than reality, although some have considered starting a new war to see if the old guardian will return...
+
+Eaiseth (etymology: earth, raise): A Devoz spoke of in legends. It is said to have raised the region from the bottom of the sea to the surface and blessed the Gemral City's area with valuable ore and gemstones. No even relatively contemporary sightings have been made of this ground-dwelling Devoz, so it is seen as a mere myth, more so than Regenesys.
+
+Competitive Tier - The most powerful Devozi lines. Rather difficult to find, catch and/or raise to their full power. Extremely rare at early game, quite rare in mid-game and uncommon in late game (likehoods will be adjusted by gym victories due to the small scale of the world).
+
+Wood: Forood (etymology: forest, wood): A forest-dwelling ape which spends its days up the trees. Highly vigilant, it is unlikely to spot it on the ground. -> lvl 20 -> Wongle (etymology: jungle, wood): A swift ape accustomed to staying on the trees for long periods of time. If you are in a forest and something nasty falls on you, it is likely to have from from a Wongle on a high branch out of your sight. -> lvl 42 -> Naservod (etymology: nature reserve, wood): An ape even quicker than Wongle. Its long limbs and light build allow it to traverse long distances both on land and in the trees. It is said that a healthy Naservod can traverse the whole region within 12 hours, which made them excellent messengers during the war whenever the communication systems were down.
+
+Water: Wiver (etymology: river, water (wiver is an obsolete synonym for wyvern)): A winged reptilian capable of both flying and diving. It is capable of living both on land and underwater, but prefers underwater environments. -> lvl 20 -> Rapidster (etymology: rapids, water): Its wings have developed bigger, allowing it a greater speed especially while swimming. Witnessing them racing one another in the rapids and rivers is a sight to behold. -> lvl 42 -> Wafall (etymology: waterfall, water): Stronger and faster than its previous forms, Wafall takes pride in its powerful wings and speeds that rival even that of raging waterfalls. Its size and capabilities make it an excellent helper for everyone surrounded by water, whether they are sailors, islanders or work on artificial structures at the ocean.
+
+Fire: Heartre (etymology: hearth, fire): The first Heartre was spotted having made a nest inside a hearth overnight. It loves residing in wood-heated houses and is a hard worker when it comes to anything even remotely related to making fire. -> lvl 20 -> Campsmofi (etymology: campfire, fire, smoke): Campsmofi is a reliable steed for any traveler who can handle fire. They are proud and obstinate, making them difficult to handle - especially if you are not comfortable with making fires. -> lvl 42 -> Wildire (etymology: wildfire, fire): Especially in the past, at the heart of a wildfire you tended to find a Wildire. Their strong six pairs of legs and two pairs of arms can uproot trees and set them on fire with a mere breath.
+
+Metal: Platal (etymology: platinum, metal): Covered in more plates than it lets on, this cube-like Devoz can shift its size and shape at will. Most of the time, it is passive, preferring to spend its time messing with passersby for its own amusement. -> lvl 20 -> Chromtal (etymology: chromium, metal): A far more offense-oriented cube than Platal, Chromtal specilizes on utilizing its sharpened plates and waiting in ambush. It tends to be more mean-spirited... or perhaps it is simply the way it manifests that stands out... -> lvl 42 -> Iriniumtal (etymology: iridium, titanium, metal): This cube has mastered unfastening its plates and using them as projectile weapons. Engaging a wild Iriniumtal is extremely dangerous as it does not care whether it hits the opposing Devoz, a static object or another living being. Training one is difficult, but after earning its trust, it will be a valuable ally both in battle and life.
+
+Earth: Fierth (etymology: field, earth): Most often spotted in agricultural settings, it is a reclusive, timid being that has a knack for improving the quality of the soil. As such, it is sought after among farmers. -> lvl 20 -> Eartope (etymology: slope, earth): Eartopes, despite their jagged appearance, love rolling down whatever hills and slopes it can find. After all, that is the fastest it will ever get even if it does not evolve. -> lvl 42 -> Mountaerth (etymology: mountain, earth): Massive, hulking and slow, this Devoz is easiest to transport long distances within its capsule. They tend to spend their lives on the same spot, getting the nourishment from the soil underneath.
+
+Starter Tier - Devozi lines used as starters. One for each type, can be caught elsewhere. Almost as strong as the Competitive Tier Devozi and about as easy to find, catch and raise as Mid Tier Devozi. Quite rare at early game, uncommon in mid-game and quite common in late game (likehoods will be adjusted by gym victories due to the small scale of the world).
+
+Wood: Seeround (etymology: seed, round): A cute and round Devoz that usually moves by rolling and hopping around. It is popular around especially children for its cuteness. -> lvl 14 -> Linground (etymology: seedling, ground): The seed that Seeround was has grown into a seedling, but its eyes are still the same cute eyes its previous form has. Linground has grown branch-like arms, so it no longer rolls so much, opting to hop and leap instead. -> lvl 32 -> Talree (etymology: tree, tall): Having grown into a full-blown tree, Talree stands taller than most of the known trainers and can leap almost twice as far as even the best athletes due to its long and strong roots. While it is serene by nature, its branch arms can lash out devastating attacks at its opponents.
+
+Water: Rippond (etymology: pond, ripple): A small frog-like Devoz. At night, you can hear and even see them communicate with one another around ponds the rain has formed. -> lvl 14 -> Lakave (etymology: lake, wave): Lakave's strong hind legs can launch it through the water at such high speeds that they create notable waves. During the war, Lakaves sent out to be distractions were often mistaken as missiles or torpedoes. -> lvl 32 -> Ocenami (etymology: ocean, tsunami): Wild Ocenami tend to live deep in the ocean. It is said that an angered individual can create tsunamis, if given enough water to form one. Attacking one, let alone a group of them, is extremely unadvisable because of this.
+
+Fire: Heash (etymology: heat, ash): When sleeping, it looks like a pile of ash surrounded by embers, but on the move its four legs, glowing red eyes and brightly glowing ember markings are unmistakable signs of a living being. -> lvl 14 -> Cember (etymology: cinder, ember): Heash's ash has reverted into cinders, and while the light and brittle material provides little defense, Cember makes up for it with lots of firepower and speed. -> lvl 32 -> Flamog (etymology: log, flame): From cinders to properly burning logs, Flamog's defenses are higher, but so is the firepower. It is able to set fire to anything it headbutts.
+
+Metal: Smopper (etymology: copper, small): A small and copper-colored robot. It can change its form from a humanoid form to a canine form at will. The results for the search word "smol" always include results with this Devoz. -> lvl 14 -> Silrage (etymology: silver, average): A silver-colored, bigger version of its previous form. It has better control over its form-changing and, thus, can turn into any animal it knows. -> lvl 32 -> Golig (etymology: gold, big): A big, gold-colored robot that can now turn into anything it can envision in its mind. Its humanoid form usually reminds people of a human it cares about, most often their trainer.
+
+Earth: Rochip (etymology: rock, chip): Its rocky exterior tends to chip and leave traces of it behind. While it is impossible to stop this chipping, fortunately Rochip always grows the lost mass back. -> lvl 14 -> Hillbris (etymology: hill, debris): Bigger than Rochip and twice the messier. Fortunately, the chips break down even better on the ground than Rochip's, making them excellent for compost. -> lvl 32 -> Dunoft (etymology: dune, soft): Bigger, softer and looser than Hillbris, but somehow far less messy when healthy, as it can recall its chipped parts back and keep them with it. At times, however, it is advisable to skim Dunoft's surface from extra chips, especially since bigger ones tend to bring trash and other debris with themselves and can cause infections.
+
+Mid Tier - Devozi lines that are moderately powerful. Relatively easily accessible to all trainers, and very common in mid-game, about as common as Beginner Tier Devozi in late game.
+
+Wood: (etymology: vine, hardy) -> lvl 16 -> (etymology: thrive) -> lvl 35 -> (etymology: lush)
+
+Water: (etymology: droplet) -> lvl 16 -> (etymology: puddle) -> lvl 35 -> (etymology: splash/spray)
+
+Fire: (etymology: spark) -> lvl 16 -> (etymology: fire) -> lvl 35 -> (etymology: flash (flashpoint?))
+
+Metal: (etymology: scoria/slag) -> lvl 16 -> (etymology: refine) -> lvl 35 -> (etymology: steel)
+
+Earth: (etymology: mine) -> lvl 16 -> (etymology: tunnel) -> lvl 35 -> (etymology: gem)
+
+Beginner Tier - Early-game Devozi that are easy to catch and raise. Very commonly found throughout the game, although the likelyhoods of coming across them will lessen as the game goes on due to adjusted appearance rates.
+
+Wood: (etymology: roots) -> lvl 12 -> (etymology: stem) -> lvl 27 -> (etymology: flower)
+    (etymology: sapling) -> lvl 21 -> (etymology: shrub)
+
+Water: (etymology: shell) -> lvl 12 -> (etymology: turtle) -> lvl 27 -> (etymology: tortoise)
+    (etymology: cloud) -> lvl 21 -> (etymology: rain)
+
+Fire: (etymology: hot) -> lvl 12 -> (etymology: burn) -> lvl 27 -> (etymology: char)
+    (etymology: bomb) -> lvl 21 -> (etymology: explosion)
+
+Metal: (etymology: ore) -> lvl 12 -> (etymology: iron) -> lvl 27 -> (etymology: beam)
+    (etymology: chain) -> lvl 21 -> (etymology: jewel)
+
+Earth: (etymology: clay) -> lvl 12 -> (etymology: soil) -> lvl 27 -> (etymology: mound)
+     (etymology: sand) -> lvl 21 -> (etymology: glass)

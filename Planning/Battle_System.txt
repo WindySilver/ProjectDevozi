@@ -1,9 +1,9 @@
 Types:
-- Wood
-- Fire
-- Water
-- Earth
-- Metal
+- Wood (speed-oriented, medium attack and defense)
+- Fire (attack-oriented, low defense, medium speed)
+- Water (medium all around)
+- Earth (very slow, above-average attack and defense)
+- Metal (defense-oriented, medium attack and speed)
 
 Effectivenesses: based on rock-paper-scissors-lizard-Spock. For the effectivenesses chart, see the image SuperEffectiveMoves, which shows which type is super effective (2x damage) against which type. For reverse, weakly effective (0.5x damage), reverse the chart (for example, Fire is super effective against Metal while Metal is weakly effective against Fire. Types that aren't weakly effective or super effective have normal effectiveness (1x damage).
 
