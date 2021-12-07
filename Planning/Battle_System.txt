@@ -1,4 +1,4 @@
-Types:
+Types and their very general strategy archetypes:
 - Wood (speed-oriented, medium attack and defense)
 - Fire (attack-oriented, low defense, medium speed)
 - Water (medium all around)
@@ -6,6 +6,8 @@ Types:
 - Metal (defense-oriented, medium attack and speed)
 
 Effectivenesses: based on rock-paper-scissors-lizard-Spock. For the effectivenesses chart, see the image SuperEffectiveMoves, which shows which type is super effective (2x damage) against which type. For reverse, weakly effective (0.5x damage), reverse the chart (for example, Fire is super effective against Metal while Metal is weakly effective against Fire. Types that aren't weakly effective or super effective have normal effectiveness (1x damage).
+
+Moves that have the same type as the user get a bonus (1.5x) to their damage.
 
 Move categories:
 - Non-damaging: Comparable to Pokémon's Status moves, which affect e.g. stats or types or inflict status conditions.

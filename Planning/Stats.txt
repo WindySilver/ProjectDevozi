@@ -1,0 +1,12 @@
+Base stat totals (the total of stat points)
+
+Legendary tier: ???
+
+Competitive tier: 300 -> 400 -> 500
+
+Starter tier: 270 -> 370 -> 470
+
+Mid tier: 250 -> 350 -> 450
+
+Beginner tier: 200 -> 300 -> 400 (3-Devoz lines) ; 250 -> 350 (2-Devoz lines)
+

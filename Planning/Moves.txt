@@ -1,0 +1,39 @@
+Format: Attack name - Power, Uses, Accuracy, Type
+
+General moves (differing only in type):
+
+General beginner attack: 20, 20, 100, Wood ("Vine Slam")/Fire ("Flame Breath")/Water ("Water Spray")/Earth ("Mud Throw")/Metal ("Blade Throw")
+
+Buff Up: 0, 20, -, Placeholder (raises user's attack)
+Wall Up: 0, 20, -, Placeholder (raises user's defense)
+Lighten Up: 0, 20, -, Placeholder (raises user's speed)
+
+Buff Down: 0, 20, -, Placeholder (decreases target's attack)
+Wall Down: 0, 20, -, Placeholder (decreases target's defense)
+Lighten Down: 0, 20, -, Placeholder (decreases target's speed)
+
+General mid-tier attack: 50, 15, 100, Wood ("Trunk Fall")/Fire ("Combustion")/Water ("Rapids")/Earth ("Clay Projectile")/Metal ("Steel Bullet")
+
+General mid-tier attack: 60, 15, 95, Wood ("Plunge")/Fire ("Cinder Toss")/Water ("Scalding Stream")/Earth ("Earth's Smash")/Metal ("Blade Slash")
+
+General powerful attack: 80, 10, 90, Wood ("Trunk Throw")/Fire ("Flame Wave")/Water ("Wave Assault")/Earth ("Ore Punch")/Metal ("Beam Slam")
+
+General very powerful attack: 120, 5, 85, Wood ("Forest's Wratch")/Fire ("Explosion")/Water ("Tsunami")/Earth ("landslide")/Metal ("Metal Collapse")
+
+---
+
+Specialized moves (only certain Devozi lines can learn):
+
+    Starter's signature moves:
+
+Growing Slam - 75, 15, 75, Wood (Seeround line)
+
+Ripple Wave - 60, 18, 100, Water (Rippond line)
+
+Cinders to Ashes - 90, 15, 90, Fire (Heash line)
+
+Blade Attack - 55, 20, 100, Metal (Smopper line)
+
+Rockslide - 90, 10, 100, Earth (Rochip line)
+
+    Competitive lines' signature moves: To be designed
