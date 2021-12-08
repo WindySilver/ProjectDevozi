@@ -36,4 +36,32 @@ Blade Attack - 55, 20, 100, Metal (Smopper line)
 
 Rockslide - 90, 10, 100, Earth (Rochip line)
 
-    Competitive lines' signature moves: To be designed
+    Competitive lines' signature moves: To be designed if there's time
+
+---
+
+Learnsets (very rough, will be refined if there's time):
+
+Level 1: General beginner attack
+
+Level 1: Buff Up
+
+Level 6: Wall Up
+
+Level 8: Lighten Up
+
+Level 10: General mid-tier attack 1
+
+Level 12: Buff Down
+
+Level 14: Wall Down
+
+Level 17: Lighten Down
+
+Level 23: General mid-tier attack 2
+
+Level 34: General powerful attack
+
+Level 36: Signature move (starter lines only for now, later on competitive lines too)
+
+Level 45: General very powerful attack

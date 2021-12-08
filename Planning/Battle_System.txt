@@ -24,3 +24,5 @@ Status conditions are bad effects that can be inflicted by certain non-damaging 
 - Burned: Like in Pokémon, the afflicted Devoz suffers from an Attack drop and is damaged at the end of each turn (1/16 of their total HP). Inflicted by Fire types.
 - Poisoned: Like in Pokémon, the afflicted Devoz loses 1/16 of its total HP each turn. Inflicted by Metal types. Why? Because heavy metal poisoning is a thing.
 - Waterlogged: A mixture of Pokémon's Sleep and Frozen status conditions. The afflicted Devoz is unable to move for up to 5 turns. Each turn, it has a 20% chance to shake off enough water to be able to move again properly. Inflicted by Water types.
+
+Unless there is time to refine the system, each Devoz defeated awards the winner 25 EXP, and each level up requires 60 EXP (subject to refining mid-development in case it needs to be balanced).

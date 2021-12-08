@@ -1,12 +1,40 @@
-Base stat totals (the total of stat points)
+Base stat totals (the total of stat points) (very basic and unrefined for now due to lack of time)
+
+Evolution gives +25 to each stat. At level 100 (the cap), a Devoz's stats will around be double its base stats plus 10 stat points. For simplicity's sake, each Devoz will gain +1 stat point at each level up in this prototype.
 
 Legendary tier: ???
 
+HP: ???
+Attack: ???
+Defense: ???
+Speed: ???
+
 Competitive tier: 300 -> 400 -> 500
+
+HP: 76
+Attack: 76
+Defense: 74
+Speed: 74
 
 Starter tier: 270 -> 370 -> 470
 
+HP: 68
+Attack: 68
+Defense: 66
+Speed: 68
+
 Mid tier: 250 -> 350 -> 450
+
+HP: 62
+Attack: 62
+Defense: 62
+Speed: 64
 
 Beginner tier: 200 -> 300 -> 400 (3-Devoz lines) ; 250 -> 350 (2-Devoz lines)
 
+    3-Devoz lines
+
+HP: 50
+Attack: 50
+Defense: 50
+Speed: 50
