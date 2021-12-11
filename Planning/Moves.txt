@@ -18,7 +18,7 @@ General mid-tier attack: 60, 15, 95, Wood ("Plunge")/Fire ("Cinder Toss")/Water 
 
 General powerful attack: 80, 10, 90, Wood ("Trunk Throw")/Fire ("Flame Wave")/Water ("Wave Assault")/Earth ("Ore Punch")/Metal ("Beam Slam")
 
-General very powerful attack: 120, 5, 85, Wood ("Forest's Wratch")/Fire ("Explosion")/Water ("Tsunami")/Earth ("landslide")/Metal ("Metal Collapse")
+General very powerful attack: 120, 5, 85, Wood ("Forest's Wrath")/Fire ("Explosion")/Water ("Tsunami")/Earth ("landslide")/Metal ("Metal Collapse")
 
 ---
 
