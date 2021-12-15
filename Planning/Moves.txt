@@ -14,11 +14,11 @@ Lighten Down: 0, 20, -, Placeholder (decreases target's speed)
 
 General mid-tier attack: 50, 15, 100, Wood ("Trunk Fall")/Fire ("Combustion")/Water ("Rapids")/Earth ("Clay Projectile")/Metal ("Steel Bullet")
 
-General mid-tier attack: 60, 15, 95, Wood ("Plunge")/Fire ("Cinder Toss")/Water ("Scalding Stream")/Earth ("Earth's Smash")/Metal ("Blade Slash")
+General mid-tier attack: 60, 15, 95, Wood ("Plunge")/Fire ("Cinder Toss")/Water ("Scalding Stream")/Earth ("Ground Smash")/Metal ("Blade Slash")
 
 General powerful attack: 80, 10, 90, Wood ("Trunk Throw")/Fire ("Flame Wave")/Water ("Wave Assault")/Earth ("Ore Punch")/Metal ("Beam Slam")
 
-General very powerful attack: 120, 5, 85, Wood ("Forest's Wrath")/Fire ("Explosion")/Water ("Tsunami")/Earth ("landslide")/Metal ("Metal Collapse")
+General very powerful attack: 120, 5, 85, Wood ("Forested Wrath")/Fire ("Explosion")/Water ("Tsunami")/Earth ("Landslide")/Metal ("Metal Collapse")
 
 ---
 
