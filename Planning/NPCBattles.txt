@@ -1,0 +1,7 @@
+Route 1:
+ 
+Trainer 0: Zara, level 5 Beginnore (Blade Throw, Buff Up)
+Trainer 1: Ferus, level 6 Rochip (Mud Throw, Buff Up, Wall Up)
+Trainer 2: Timothy, level 7 Graot (Vine Slam, Buff Up, Wall Up and Lighten Up) and level 8 Seeround (Vine Slam, Buff Up, Wall Up and Lighten Up)
+Trainer 3: Greta, level 9 Rippond (Water Spray, Buff Up, Wall Up and Lighten Up)
+Trainer 4: Rival battle, level 10 starter vs. you (beginner attack, Buff Up, either Wall Up or Lighten Up (random), first mid attack)
