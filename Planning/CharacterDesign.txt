@@ -2,7 +2,7 @@ Lyzandra Pine (I just wanted to shoehorn that first name there (although, it wil
 
 Ren: The player character. Etymology: a unisex name, 恋 (ren) meaning "love". (according to Behind The Name)
 
-RIVAL: The player's rival.
+Roe: The player's rival. The name was given in prototype 1's testing because I got tired of having it say RIVAL, and Roe was the first name that came to my mind that I liked.
 
 Bellwort: Named after a flower. The gym leader of the Fruta Gym. A botanist by trade outside of gyms and one of the workers at the Fruta Orchards. You are not likely to be able to find a plant she is unable to identify.
 
