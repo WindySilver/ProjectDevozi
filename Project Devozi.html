@@ -160,10 +160,11 @@ Professor Pine: Oh, I see.
 
 She returns to typing.
 
-Professor Pine: Alright, I&#39;ve got everything down. Now, shall we [[begin|Begin]]?&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Todo" tags="" position="49,158" size="100,100">Critical:
+Professor Pine: Alright, I&#39;ve got everything down. Now, shall we [[begin|Begin]]?&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Todo" tags="" position="49,159" size="100,100">Critical:
 - TESTING
 
 Needed:
+- Update slots
 
 Lower priority:
 - Less useless line breaks
@@ -332,13 +333,13 @@ $BattleDevoz.name&#39;s HP: $BattleDevoz.hp / $BattleDevoz.maxhp level: $BattleD
 
 &lt;&lt;else&gt;&gt;You won! You gained $victorymoney money!&lt;&lt;set $money += $victorymoney&gt;&gt;&lt;&lt;include &quot;Update trainer counter&quot;&gt;&gt;
 
-[[End battle]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Attack" tags="" position="213,821" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set _available to 0&gt;&gt;&lt;&lt;if $BattleDevoz.move1.uses isnot 0&gt;&gt;&lt;&lt;set _available +=1&gt;&gt;[[$BattleDevoz.move1.name|Use move1]]&lt;&lt;else&gt;&gt;$BattleDevoz.move1.name&gt;&gt;&lt;&lt;/if&gt;&gt; Uses: $BattleDevoz.move1.uses / $BattleDevoz.move1.maxuses&lt;br&gt;
-&lt;&lt;if $BattleDevoz.move2.name is not $nullMove.name&gt;&gt;&lt;&lt;if $BattleDevoz.move2.uses isnot 0&gt;&gt;&lt;&lt;set _available +=1&gt;&gt;[[$BattleDevoz.move2.name|Use move2]]&lt;&lt;else&gt;&gt;$BattleDevoz.move2.name&gt;&gt;&lt;&lt;/if&gt;&gt; Uses: $BattleDevoz.move2.uses / $BattleDevoz.move2.maxuses&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $BattleDevoz.move3.name is not $nullMove.name&gt;&gt;&lt;&lt;if $BattleDevoz.move3.uses isnot 0&gt;&gt;&lt;&lt;set _available +=1&gt;&gt;[[$BattleDevoz.move3.name|Use move3]]&lt;&lt;else&gt;&gt;$BattleDevoz.move3.name&gt;&gt;&lt;&lt;/if&gt;&gt; Uses: $BattleDevoz.move3.uses / $BattleDevoz.move3.maxuses&lt;br&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;if $BattleDevoz.move4.name is not $nullMove.name&gt;&gt;&lt;&lt;if $BattleDevoz.move4.uses isnot 0&gt;&gt;&lt;&lt;set _available +=1&gt;&gt;[[$BattleDevoz.move4.name|Use move4]]&lt;&lt;else&gt;&gt;$BattleDevoz.move4.name&gt;&gt;&lt;&lt;/if&gt;&gt; Uses: $BattleDevoz.move4.uses / $BattleDevoz.move4.maxuses&lt;br&gt;&lt;&lt;/if&gt;&gt;
+[[End battle]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Attack" tags="" position="209,821" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set _available to 0&gt;&gt;&lt;&lt;if $BattleDevoz.move1.uses isnot 0&gt;&gt;&lt;&lt;set _available +=1&gt;&gt;[[$BattleDevoz.move1.name|Use move1]]&lt;&lt;else&gt;&gt;$BattleDevoz.move1.name&lt;&lt;/if&gt;&gt; Uses: $BattleDevoz.move1.uses / $BattleDevoz.move1.maxuses&lt;br&gt;
+&lt;&lt;if $BattleDevoz.move2.name is not $nullMove.name&gt;&gt;&lt;&lt;if $BattleDevoz.move2.uses isnot 0&gt;&gt;&lt;&lt;set _available +=1&gt;&gt;[[$BattleDevoz.move2.name|Use move2]]&lt;&lt;else&gt;&gt;$BattleDevoz.move2.name&lt;&lt;/if&gt;&gt; Uses: $BattleDevoz.move2.uses / $BattleDevoz.move2.maxuses&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $BattleDevoz.move3.name is not $nullMove.name&gt;&gt;&lt;&lt;if $BattleDevoz.move3.uses isnot 0&gt;&gt;&lt;&lt;set _available +=1&gt;&gt;[[$BattleDevoz.move3.name|Use move3]]&lt;&lt;else&gt;&gt;$BattleDevoz.move3.name&lt;&lt;/if&gt;&gt; Uses: $BattleDevoz.move3.uses / $BattleDevoz.move3.maxuses&lt;br&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $BattleDevoz.move4.name is not $nullMove.name&gt;&gt;&lt;&lt;if $BattleDevoz.move4.uses isnot 0&gt;&gt;&lt;&lt;set _available +=1&gt;&gt;[[$BattleDevoz.move4.name|Use move4]]&lt;&lt;else&gt;&gt;$BattleDevoz.move4.name&lt;&lt;/if&gt;&gt; Uses: $BattleDevoz.move4.uses / $BattleDevoz.move4.maxuses&lt;br&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;if _available is 0&gt;&gt;[[$nullMove.name|Out of moves]]&lt;br&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 
-[[Cancel|Battle]]</tw-passagedata><tw-passagedata pid="8" name="End battle" tags="" position="641,704" size="100,100">&lt;&lt;set $team1 to $BattleDevoz&gt;&gt;&lt;&lt;set $Battling to false&gt;&gt;&lt;&lt;if $gymbattle is true&gt;&gt;&lt;&lt;include &quot;Gym victory&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;include &quot;Map&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Battle start" tags="" position="444,312" size="100,100">&lt;&lt;set $catchable to false&gt;&gt;&lt;&lt;set $abuff to 0&gt;&gt;&lt;&lt;set $dbuff to 0&gt;&gt;&lt;&lt;set $sbuff to 0&gt;&gt;&lt;&lt;set $adebuff to 0&gt;&gt;&lt;&lt;set $ddebuff to 0&gt;&gt;&lt;&lt;set $sdebuff to 0&gt;&gt;&lt;&lt;set $opponentFainted to 0&gt;&gt;&lt;&lt;set $BattleDevoz to $team1&gt;&gt;&lt;&lt;set $Battling to true&gt;&gt;Battle! Your opponent is $opponent!
+[[Cancel|Battle]]</tw-passagedata><tw-passagedata pid="8" name="End battle" tags="" position="636,705" size="100,100">&lt;&lt;include &quot;Afterbattle Update&quot;&gt;&gt;&lt;&lt;if $gymbattle is true&gt;&gt;&lt;&lt;include &quot;Gym victory&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;include &quot;Map&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;set $gymbattle to false&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Battle start" tags="" position="444,312" size="100,100">&lt;&lt;set $catchable to false&gt;&gt;&lt;&lt;set $abuff to 0&gt;&gt;&lt;&lt;set $dbuff to 0&gt;&gt;&lt;&lt;set $sbuff to 0&gt;&gt;&lt;&lt;set $adebuff to 0&gt;&gt;&lt;&lt;set $ddebuff to 0&gt;&gt;&lt;&lt;set $sdebuff to 0&gt;&gt;&lt;&lt;set $opponentFainted to 0&gt;&gt;&lt;&lt;set $BattleDevoz to $team1&gt;&gt;&lt;&lt;set $Battling to true&gt;&gt;Battle! Your opponent is $opponent!
 
 $opponent sent out $opposing1.name! 
 
@@ -361,22 +362,22 @@ You send out $BattleDevoz.name.
 &lt;&lt;if $opposing1.hp &lt;= 0&gt;&gt;The opposing Devoz fainted!&lt;&lt;set $opponentDevozi  -= 1&gt;&gt;&lt;&lt;set $opponentFainted +=1&gt;&gt;&lt;&lt;include &quot;Gain EXP&quot;&gt;&gt;&lt;&lt;include &quot;Next Opponent Devoz&quot;&gt;&gt;&lt;br&gt;&lt;br&gt;&lt;&lt;include &quot;Battle&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;Opponent&#39;s $opposing1.name used $OpponentSelected.name!&lt;&lt;if random(1, 100) gt $OpponentSelected.accuracy&gt;&gt; But it missed!&lt;&lt;else&gt;&gt; &lt;&lt;include &quot;Calculate enemy damage&quot;&gt;&gt;&lt;br&gt;&lt;br&gt;
 
-&lt;&lt;if $BattleDevoz.hp &lt;= 0&gt;&gt;Your Devoz fainted!&lt;&lt;set $team1 to $BattleDevoz&gt;&gt;&lt;&lt;set $OwnFainted +=1&gt;&gt;&lt;br&gt;&lt;&lt;include &quot;Change Team Composition&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;include &quot;Battle&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Calculate my damage" tags="" position="364,1205" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;if $SelectedMove.type is &quot;A+&quot;&gt;&gt;&lt;&lt;if $abuff &lt; 6&gt;&gt;&lt;&lt;set $abuff += 1&gt;&gt;$BattleDevoz.name&#39;s attack rose!&lt;&lt;else&gt;&gt;But its attack cannot get any higher!&lt;&lt;/if&gt;&gt;
+&lt;&lt;if $BattleDevoz.hp &lt;= 0&gt;&gt;Your Devoz fainted!&lt;&lt;set $team1 to $BattleDevoz&gt;&gt;&lt;&lt;set $OwnFainted +=1&gt;&gt;&lt;br&gt;&lt;&lt;include &quot;Change Team Composition&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;include &quot;Battle&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="Calculate my damage" tags="" position="363,1202" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;if $SelectedMove.type is &quot;A+&quot;&gt;&gt;&lt;&lt;if $abuff &lt; 6&gt;&gt;&lt;&lt;set $abuff += 1&gt;&gt;$BattleDevoz.name&#39;s attack rose!&lt;&lt;else&gt;&gt;But its attack cannot get any higher!&lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $SelectedMove.type is &quot;D+&quot;&gt;&gt;&lt;&lt;if $dbuff &lt; 6&gt;&gt;&lt;&lt;set $dbuff += 1&gt;&gt;$BattleDevoz.name&#39;s defense rose!&lt;&lt;else&gt;&gt;But its defense cannot get any higher!&lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $SelectedMove.type is &quot;S+&quot;&gt;&gt;&lt;&lt;if $sbuff &lt; 6&gt;&gt;&lt;&lt;set $sbuff += 1&gt;&gt;$BattleDevoz.name&#39;s speed rose!&lt;&lt;else&gt;&gt;But its speed cannot get any higher!&lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $SelectedMove.type is &quot;A-&quot;&gt;&gt;&lt;&lt;if $adebuff &lt; 6&gt;&gt;&lt;&lt;set $adebuff -= 1&gt;&gt;$opposing1.name&#39;s attack fell!&lt;&lt;else&gt;&gt;But its attack cannot get any lower!&lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $SelectedMove.type is &quot;D-&quot;&gt;&gt;&lt;&lt;if $ddebuff &lt; 6&gt;&gt;&lt;&lt;set $ddebuff -= 1&gt;&gt;$opposing1.name&#39;s defense fell!&lt;&lt;else&gt;&gt;But its defense cannot get any lower!&lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $SelectedMove.type is &quot;S-&quot;&gt;&gt;&lt;&lt;if $sdebuff &lt; 6&gt;&gt;&lt;&lt;set $sdebuff -= 1&gt;&gt;$opposing1.name&#39;s speed fell!&lt;&lt;else&gt;&gt;But its speed cannot get any lower!&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $SelectedMove.type is &quot;A-&quot;&gt;&gt;&lt;&lt;if $adebuff &lt; 6 &amp;&amp; $adebuff &gt; -6&gt;&gt;&lt;&lt;set $adebuff -= 1&gt;&gt;$opposing1.name&#39;s attack fell!&lt;&lt;else&gt;&gt;But its attack cannot get any lower!&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $SelectedMove.type is &quot;D-&quot;&gt;&gt;&lt;&lt;if $ddebuff &lt; 6 &amp;&amp; $ddebuff &gt; -6&gt;&gt;&lt;&lt;set $ddebuff -= 1&gt;&gt;$opposing1.name&#39;s defense fell!&lt;&lt;else&gt;&gt;But its defense cannot get any lower!&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $SelectedMove.type is &quot;S-&quot;&gt;&gt;&lt;&lt;if $sdebuff &lt; 6 &amp;&amp; $sdebuff &gt; -6&gt;&gt;&lt;&lt;set $sdebuff -= 1&gt;&gt;$opposing1.name&#39;s speed fell!&lt;&lt;else&gt;&gt;But its speed cannot get any lower!&lt;&lt;/if&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;set $incomingType to $SelectedMove.type&gt;&gt;&lt;&lt;set $receivingType to $opposing1.type&gt;&gt;&lt;&lt;include &quot;determine effectiveness&quot;&gt;&gt;
 &lt;&lt;if $SelectedMove.type is $BattleDevoz.type&gt;&gt;&lt;&lt;set _typebonus to 2&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set _typebonus to 1&gt;&gt;&lt;&lt;/if&gt;&gt;
 
 
 &lt;&lt;set $damage to (($BattleDevoz.level/5)*$SelectedMove.power*($BattleDevoz.attack*((8+$abuff)/8))/($opposing1.defense*((8+$ddebuff)/8)))/10*$multiplier*_typebonus&gt;&gt;It did $damage damage!&lt;&lt;set $opposing1.hp -= $damage&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Calculate enemy damage" tags="" position="496,1203" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;if $OpponentSelected.type is &quot;A+&quot;&gt;&gt;&lt;&lt;if $adebuff &lt; 6&gt;&gt;&lt;&lt;set $abuff += 1&gt;&gt;$opposing1.name&#39;s attack rose!&lt;&lt;else&gt;&gt;But its attack cannot get any higher!&lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $OpponentSelected.type is &quot;D+&quot;&gt;&gt;&lt;&lt;if $dbuff &lt; 6&gt;&gt;&lt;&lt;set $ddebuff += 1&gt;&gt;$opposing1.name&#39;s defense rose!&lt;&lt;else&gt;&gt;But its defense cannot get any higher!&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $OpponentSelected.type is &quot;D+&quot;&gt;&gt;&lt;&lt;if $ddebuff &lt; 6&gt;&gt;&lt;&lt;set $ddebuff += 1&gt;&gt;$opposing1.name&#39;s defense rose!&lt;&lt;else&gt;&gt;But its defense cannot get any higher!&lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $OpponentSelected.type is &quot;S+&quot;&gt;&gt;&lt;&lt;if $sdebuff &lt; 6&gt;&gt;&lt;&lt;set $sbuff += 1&gt;&gt;$opposing1.name&#39;s speed rose!&lt;&lt;else&gt;&gt;But its speed cannot get any higher!&lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $OpponentSelected.type is &quot;A-&quot;&gt;&gt;&lt;&lt;if $abuff &lt; 6&gt;&gt;&lt;&lt;set $adebuff -= 1&gt;&gt;$BattleDevoz.name&#39;s attack fell!&lt;&lt;else&gt;&gt;But its attack cannot get any lower!&lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $OpponentSelected.type is &quot;D-&quot;&gt;&gt;&lt;&lt;if $dbuff &lt; 6&gt;&gt;&lt;&lt;set $ddebuff -= 1&gt;&gt;$BattleDevoz.name&#39;s defense fell!&lt;&lt;else&gt;&gt;But its defense cannot get any lower!&lt;&lt;/if&gt;&gt;
-&lt;&lt;elseif $OpponentSelected.type is &quot;S-&quot;&gt;&gt;&lt;&lt;if $sbuff &lt; 6&gt;&gt;&lt;&lt;set $sdebuff -= 1&gt;&gt;$BattleDevoz.name&#39;s speed fell!&lt;&lt;else&gt;&gt;But its speed cannot get any lower!&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $OpponentSelected.type is &quot;A-&quot;&gt;&gt;&lt;&lt;if $abuff &lt; 6 &amp;&amp; $abuff &gt; -6&gt;&gt;&lt;&lt;set $adebuff -= 1&gt;&gt;$BattleDevoz.name&#39;s attack fell!&lt;&lt;else&gt;&gt;But its attack cannot get any lower!&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $OpponentSelected.type is &quot;D-&quot;&gt;&gt;&lt;&lt;if $dbuff &lt; 6 &amp;&amp; $ddebuff &gt; -6&gt;&gt;&lt;&lt;set $ddebuff -= 1&gt;&gt;$BattleDevoz.name&#39;s defense fell!&lt;&lt;else&gt;&gt;But its defense cannot get any lower!&lt;&lt;/if&gt;&gt;
+&lt;&lt;elseif $OpponentSelected.type is &quot;S-&quot;&gt;&gt;&lt;&lt;if $sbuff &lt; 6 &amp;&amp; $sdebuff &gt; -6&gt;&gt;&lt;&lt;set $sdebuff -= 1&gt;&gt;$BattleDevoz.name&#39;s speed fell!&lt;&lt;else&gt;&gt;But its speed cannot get any lower!&lt;&lt;/if&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;set $incomingType to $OpponentSelected.type&gt;&gt;&lt;&lt;set $receivingType to $BattleDevoz.type&gt;&gt;&lt;&lt;include &quot;determine effectiveness&quot;&gt;&gt;
 
 &lt;&lt;if $OpponentSelected.type is $opposing1.type&gt;&gt;&lt;&lt;set _typebonus to 2&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set _typebonus to 1&gt;&gt;&lt;&lt;/if&gt;&gt;
@@ -391,7 +392,7 @@ You send out $BattleDevoz.name.
 &lt;&lt;if $incomingType is $Earth.sup1 || $incomingType is $Earth.sup2&gt;&gt;&lt;&lt;set $multiplier to 2&gt;&gt;&lt;&lt;elseif $incomingType is $Earth.wea1 || $incomingType is $Earth.wea2&gt;&gt;&lt;&lt;set $multiplier to 0.5&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $receivingType is &quot;Metal&quot;&gt;&gt;
 &lt;&lt;if $incomingType is $Metal.sup1 || $incomingType is $Metal.sup2&gt;&gt;&lt;&lt;set $multiplier to 2&gt;&gt;&lt;&lt;elseif $incomingType is $Metal.wea1 || $incomingType is $Metal.wea2&gt;&gt;&lt;&lt;set $multiplier to 0.5&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;else&gt;&gt;&lt;&lt;set $multiplier to 1&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Head to the nearest Healing Station" tags="" position="619,426" size="100,100">&lt;&lt;set $Battling to false&gt;&gt;&lt;&lt;if $location is &quot;firstBattle&quot;&gt;&gt;&lt;&lt;include Map&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $location to $nearestHealing&gt;&gt;&lt;&lt;set $arrival to $nearestHealing&gt;&gt;&lt;&lt;include &quot;Healing Station&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Map" tags="" position="1196,581" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $lookdatabase to false&gt;&gt;&lt;&lt;if $location is &quot;firstBattle&quot;&gt;&gt;$rivalname: Wow, that was awesome!&lt;br&gt;&lt;br&gt;
+&lt;&lt;else&gt;&gt;&lt;&lt;set $multiplier to 1&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Head to the nearest Healing Station" tags="" position="619,426" size="100,100">&lt;&lt;include &quot;Afterbattle Update&quot;&gt;&gt;&lt;&lt;set $gymbattle to false&gt;&gt;&lt;&lt;set $Battling to false&gt;&gt;&lt;&lt;if $location is &quot;firstBattle&quot;&gt;&gt;&lt;&lt;include Map&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $location to $nearestHealing&gt;&gt;&lt;&lt;set $arrival to $nearestHealing&gt;&gt;&lt;&lt;include &quot;Healing Station&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Map" tags="" position="1196,581" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $lookdatabase to false&gt;&gt;&lt;&lt;if $location is &quot;firstBattle&quot;&gt;&gt;$rivalname: Wow, that was awesome!&lt;br&gt;&lt;br&gt;
 
 Professor Pine, who had been watching your battle from the sidelines, claps.&lt;br&gt;&lt;br&gt;
 
@@ -456,7 +457,7 @@ To Route 2 (unavailable)&lt;br&gt;
 
 There is nothing to do right now, so you should leave.
 
-[[Regenesys City|Map]]</tw-passagedata><tw-passagedata pid="21" name="Healing Station" tags="" position="1147,818" size="100,100">&lt;&lt;if $arrival is &quot;Regenesys&quot;&gt;&gt;&lt;&lt;set $location to &quot;Regenesys City&quot;&gt;&gt;&lt;&lt;set $nearestHealing to &quot;Regenesys&quot;&gt;&gt;&lt;&lt;elseif $arrival is &quot;Fruta&quot;&gt;&gt;&lt;&lt;set $location to &quot;Fruta City&quot;&gt;&gt;&lt;&lt;set $nearestHealing to &quot;Fruta&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;You are at the Healing Station. Do you want to heal your Devozi? Or shop for something?
+[[Regenesys City|Map]]</tw-passagedata><tw-passagedata pid="21" name="Healing Station" tags="" position="1139,818" size="100,100">&lt;&lt;if $arrival is &quot;Regenesys&quot;&gt;&gt;&lt;&lt;set $location to &quot;Regenesys City&quot;&gt;&gt;&lt;&lt;set $nearestHealing to &quot;Regenesys&quot;&gt;&gt;&lt;&lt;elseif $arrival is &quot;Fruta&quot;&gt;&gt;&lt;&lt;set $location to &quot;Fruta City&quot;&gt;&gt;&lt;&lt;set $nearestHealing to &quot;Fruta&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;You are at the Healing Station. Do you want to heal your Devozi? Or shop for something?
 
 [[Heal]]
 [[Shop]]
@@ -507,7 +508,7 @@ You have only been rivals for a short while, but you would not have it any other
 &lt;&lt;else&gt;&gt;Error! Missing trainer data! Please report to the dev! Trainers already defeated: $Route1Battled
 
 [[Return|Map]]&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="27" name="Seek Devozi" tags="" position="1109,292" size="100,100">&lt;&lt;if random(1, 2) is 1&gt;&gt;&lt;&lt;include &quot;Start wild battle&quot;&gt;&gt;
-&lt;&lt;else&gt;&gt;You don&#39;t find any Devozi. Do you want to [[leave the grass|Map]] or [[continue looking|Seek Devozi]]?&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Go forward" tags="" position="1396,402" size="100,100">&lt;&lt;set $RouteSteps += 1&gt;&gt;&lt;&lt;if random(1, 3) is 1&gt;&gt;&lt;&lt;include &quot;Start wild battle&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;include &quot;Map&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Wild battle start" tags="" position="791,273" size="100,100">&lt;&lt;set $catchable to true&gt;&gt;&lt;&lt;set $Battling to true&gt;&gt;&lt;&lt;set $opponentDevozi to 1&gt;&gt;&lt;&lt;set $BattleDevoz to $team1&gt;&gt;Battle! Your opponent is a wild $opposing1.name!
+&lt;&lt;else&gt;&gt;You don&#39;t find any Devozi. Do you want to [[leave the grass|Map]] or [[continue looking|Seek Devozi]]?&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="28" name="Go forward" tags="" position="1396,402" size="100,100">&lt;&lt;set $RouteSteps += 1&gt;&gt;&lt;&lt;if random(1, 3) is 1&gt;&gt;&lt;&lt;include &quot;Start wild battle&quot;&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;include &quot;Map&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="Wild battle start" tags="" position="791,273" size="100,100">&lt;&lt;set $catchable to true&gt;&gt;&lt;&lt;set $Battling to true&gt;&gt;&lt;&lt;set $opponentDevozi to 1&gt;&gt;&lt;&lt;set $opponentFainted to 0&gt;&gt;&lt;&lt;set $BattleDevoz to $team1&gt;&gt;Battle! Your opponent is a wild $opposing1.name!
 
 You send out $BattleDevoz.name.
 
@@ -524,7 +525,7 @@ You send out $BattleDevoz.name.
 
 &lt;&lt;else&gt;&gt;You won!
 
-[[End battle]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Database" tags="" position="226,169" size="100,100">&lt;&lt;nobr&gt;&gt;Booting up database...&lt;br&gt;&lt;br&gt;
+[[End battle]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Database" tags="" position="224,171" size="100,100">&lt;&lt;nobr&gt;&gt;Booting up database...&lt;br&gt;&lt;br&gt;
 
 Loading move data...&lt;br&gt;&lt;br&gt;
 
@@ -536,7 +537,7 @@ Loading move data...&lt;br&gt;&lt;br&gt;
 &lt;&lt;set $BladeThrow to {name : &quot;Blade Throw&quot;, power : 20, uses: 20, maxuses: 20, accuracy: 100, type: &quot;Metal&quot;}&gt;&gt;
 &lt;&lt;set $BuffUp to {name : &quot;Buff Up&quot;, power : 0, uses : 20, maxuses: 20, accuracy: 1000, type: &quot;A+&quot;}&gt;&gt;
 &lt;&lt;set $WallUp to {name : &quot;Wall Up&quot;, power : 0, uses : 20, maxuses: 20, accuracy: 1000, type: &quot;D+&quot;}&gt;&gt;
-&lt;&lt;set $LightenUp to {name : &quot;Wall Up&quot;, power : 0, uses : 20, maxuses: 20, accuracy: 1000, type: &quot;S+&quot;}&gt;&gt;
+&lt;&lt;set $LightenUp to {name : &quot;Lighten Up&quot;, power : 0, uses : 20, maxuses: 20, accuracy: 1000, type: &quot;S+&quot;}&gt;&gt;
 &lt;&lt;set $BuffDown to {name : &quot;Buff Down&quot;, power : 0, uses : 20, maxuses: 20, accuracy: 1000, type: &quot;A-&quot;}&gt;&gt;
 &lt;&lt;set $WallDown to {name : &quot;Wall Down&quot;, power : 0, uses : 20, maxuses: 20, accuracy: 1000, type: &quot;D-&quot;}&gt;&gt;
 &lt;&lt;set $LightenDown to {name : &quot;Lighten Down&quot;, power : 0, uses : 20, maxuses: 20, accuracy: 1000, type: &quot;S-&quot;}&gt;&gt;
@@ -565,7 +566,7 @@ Move data load successful. Loading Devoz data...&lt;br&gt;&lt;br&gt;
 
 &lt;&lt;set $tiers to { le: &quot;Legendary&quot;, co: &quot;Competitive&quot;, st: &quot;Starter&quot;, mi: &quot;Mid&quot;, b1: &quot;Beginner1&quot;, b2: &quot;Beginner2&quot;, nu: &quot;None&quot; }&gt;&gt;
 
-&lt;&lt;set $emptyDevozSlot to { name : &quot;empty slot&quot;, hp: 0, maxhp: 0, move1 : $nullMove, move2 : $nullMove, move3 : $nullMove, move4 : $nullMove }&gt;&gt;
+&lt;&lt;set $emptyDevozSlot to { id: -1, name : &quot;empty slot&quot;, hp: 0, maxhp: 0, move1 : $nullMove, move2 : $nullMove, move3 : $nullMove, move4 : $nullMove }&gt;&gt;
 &lt;&lt;set $NullDevoz to { id: 0, speciesname : &quot;Null&quot; , name : &quot;Null&quot;, type: &quot;Null&quot;, level: 0, exp : 0, hp : 10, maxhp : 10, attack: 10, defense: 10, speed: 10, move1 : $nullMove, move2 : $nullMove, move3 : $nullMove, move4 : $nullMove, tier: $tiers.nu }&gt;&gt;
 
 Loading Starter tier... 
@@ -692,7 +693,6 @@ Item data load successful. Loading player data...&lt;br&gt;&lt;br&gt;
 &lt;&lt;set $BattleDevoz to $NullDevoz&gt;&gt;
 &lt;&lt;set $DevozSlot0 to $emptyDevozSlot&gt;&gt;
 &lt;&lt;set $DevozSlot1 to $emptyDevozSlot&gt;&gt;
-&lt;&lt;set $DevozSlot1 to $emptyDevozSlot&gt;&gt;
 &lt;&lt;set $DevozSlot2 to $emptyDevozSlot&gt;&gt;
 &lt;&lt;set $DevozSlot3 to $emptyDevozSlot&gt;&gt;
 &lt;&lt;set $DevozSlot4 to $emptyDevozSlot&gt;&gt;
@@ -774,6 +774,7 @@ Player data load successful. Loading world data...&lt;br&gt;&lt;br&gt;
 
 &lt;&lt;set $Route1Battled to 0&gt;&gt;
 &lt;&lt;set $Route1Trainers to 5&gt;&gt;
+&lt;&lt;set $experience to 25&gt;&gt;
 
 World data load successful.&lt;br&gt;&lt;br&gt;
 
@@ -797,7 +798,7 @@ Ready to [[start]].</tw-passagedata><tw-passagedata pid="32" name="Start wild ba
 [[End battle]]
 &lt;&lt;else&gt;&gt;No! The Devoz broke free! The amulet shattered!
 
-&lt;&lt;include &quot;Failed flee&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Add to team" tags="" position="784,802" size="100,100">Do you want to give a nickname to your Devoz?&lt;br&gt;&lt;br&gt;
+&lt;&lt;include &quot;Failed flee&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Add to team" tags="" position="776,808" size="100,100">Do you want to give a nickname to your Devoz?&lt;br&gt;&lt;br&gt;
 
 &lt;&lt;radiobutton &quot;_nickname&quot; &quot;true&quot; autocheck&gt;&gt;Yes&lt;br&gt;
 &lt;&lt;radiobutton &quot;_nickname&quot; &quot;false&quot; autocheck&gt;&gt;No&lt;br&gt;&lt;br&gt;
@@ -818,94 +819,99 @@ You named your $opposing1.speciesname to $opposing1.name.&lt;&lt;/linkappend&gt;
 &lt;&lt;elseif $devozId is 3&gt;&gt;&lt;&lt;set $DevozSlot3 to $opposing1&gt;&gt;&lt;&lt;set $team4 to $DevozSlot3&gt;&gt;
 &lt;&lt;elseif $devozId is 4&gt;&gt;&lt;&lt;set $DevozSlot4 to $opposing1&gt;&gt;&lt;&lt;set $team5 to $DevozSlot4&gt;&gt;
 &lt;&lt;elseif $devozId is 5&gt;&gt;&lt;&lt;set $DevozSlot5 to $opposing1&gt;&gt;&lt;&lt;set $team6 to $DevozSlot5&gt;&gt;
-&lt;&lt;elseif $devozId is 6&gt;&gt;&lt;&lt;set $DevozSlot6to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 7&gt;&gt;&lt;&lt;set $DevozSlot7to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 8&gt;&gt;&lt;&lt;set $DevozSlot8to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 9&gt;&gt;&lt;&lt;set $DevozSlot9to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 10&gt;&gt;&lt;&lt;set $DevozSlot10to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 11&gt;&gt;&lt;&lt;set $DevozSlot11to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 12&gt;&gt;&lt;&lt;set $DevozSlot12to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 13&gt;&gt;&lt;&lt;set $DevozSlot13to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 14&gt;&gt;&lt;&lt;set $DevozSlot14to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 15&gt;&gt;&lt;&lt;set $DevozSlot15to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 16&gt;&gt;&lt;&lt;set $DevozSlot16to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 17&gt;&gt;&lt;&lt;set $DevozSlot17to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 18&gt;&gt;&lt;&lt;set $DevozSlot18to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 19&gt;&gt;&lt;&lt;set $DevozSlot19to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 20&gt;&gt;&lt;&lt;set $DevozSlot20to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 21&gt;&gt;&lt;&lt;set $DevozSlot21to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 22&gt;&gt;&lt;&lt;set $DevozSlot22to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 23&gt;&gt;&lt;&lt;set $DevozSlot23to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 24&gt;&gt;&lt;&lt;set $DevozSlot24to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 25&gt;&gt;&lt;&lt;set $DevozSlot25to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 26&gt;&gt;&lt;&lt;set $DevozSlot26to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 27&gt;&gt;&lt;&lt;set $DevozSlot27to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 28&gt;&gt;&lt;&lt;set $DevozSlot28to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 29&gt;&gt;&lt;&lt;set $DevozSlot29to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 30&gt;&gt;&lt;&lt;set $DevozSlot30to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 31&gt;&gt;&lt;&lt;set $DevozSlot31to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 32&gt;&gt;&lt;&lt;set $DevozSlot32to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 33&gt;&gt;&lt;&lt;set $DevozSlot33to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 34&gt;&gt;&lt;&lt;set $DevozSlot34to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 35&gt;&gt;&lt;&lt;set $DevozSlot35to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 36&gt;&gt;&lt;&lt;set $DevozSlot36to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 37&gt;&gt;&lt;&lt;set $DevozSlot37to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 38&gt;&gt;&lt;&lt;set $DevozSlot38to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 39&gt;&gt;&lt;&lt;set $DevozSlot39to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 40&gt;&gt;&lt;&lt;set $DevozSlot40to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 41&gt;&gt;&lt;&lt;set $DevozSlot41to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 42&gt;&gt;&lt;&lt;set $DevozSlot42to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 43&gt;&gt;&lt;&lt;set $DevozSlot43to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 44&gt;&gt;&lt;&lt;set $DevozSlot44to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 45&gt;&gt;&lt;&lt;set $DevozSlot45to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 46&gt;&gt;&lt;&lt;set $DevozSlot46to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 47&gt;&gt;&lt;&lt;set $DevozSlot47to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 48&gt;&gt;&lt;&lt;set $DevozSlot48to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 49&gt;&gt;&lt;&lt;set $DevozSlot49to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 50&gt;&gt;&lt;&lt;set $DevozSlot50to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 51&gt;&gt;&lt;&lt;set $DevozSlot51to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 52&gt;&gt;&lt;&lt;set $DevozSlot52to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 53&gt;&gt;&lt;&lt;set $DevozSlot53to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 54&gt;&gt;&lt;&lt;set $DevozSlot54to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 55&gt;&gt;&lt;&lt;set $DevozSlot55to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 56&gt;&gt;&lt;&lt;set $DevozSlot56to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 57&gt;&gt;&lt;&lt;set $DevozSlot57to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 58&gt;&gt;&lt;&lt;set $DevozSlot58to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 59&gt;&gt;&lt;&lt;set $DevozSlot59to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 60&gt;&gt;&lt;&lt;set $DevozSlot60to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 61&gt;&gt;&lt;&lt;set $DevozSlot61to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 62&gt;&gt;&lt;&lt;set $DevozSlot62to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 63&gt;&gt;&lt;&lt;set $DevozSlot63to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 64&gt;&gt;&lt;&lt;set $DevozSlot64to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 65&gt;&gt;&lt;&lt;set $DevozSlot65to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 66&gt;&gt;&lt;&lt;set $DevozSlot66to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 67&gt;&gt;&lt;&lt;set $DevozSlot67to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 68&gt;&gt;&lt;&lt;set $DevozSlot68to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 69&gt;&gt;&lt;&lt;set $DevozSlot69to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 70&gt;&gt;&lt;&lt;set $DevozSlot70to $opposing1&gt;&gt;
-&lt;&lt;elseif $devozId is 71&gt;&gt;&lt;&lt;set $DevozSlot71to $opposing1&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;set $devozId += 1&gt;&gt;&lt;&lt;if $devozId &gt; $maxstorage&gt;&gt;&lt;br&gt;&lt;br&gt;Your storage is full! If you want to catch more Devozi, you need to release some of your pre-existing ones!&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Gym" tags="" position="1534,476" size="100,100">&lt;&lt;set $canflee to true&gt;&gt;When you get to the gym, the Gym Chief, Bellwort, is waiting for you.
+&lt;&lt;elseif $devozId is 6&gt;&gt;&lt;&lt;set $DevozSlot6 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 7&gt;&gt;&lt;&lt;set $DevozSlot7 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 8&gt;&gt;&lt;&lt;set $DevozSlot8 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 9&gt;&gt;&lt;&lt;set $DevozSlot9 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 10&gt;&gt;&lt;&lt;set $DevozSlot10 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 11&gt;&gt;&lt;&lt;set $DevozSlot11 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 12&gt;&gt;&lt;&lt;set $DevozSlot12 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 13&gt;&gt;&lt;&lt;set $DevozSlot13 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 14&gt;&gt;&lt;&lt;set $DevozSlot14 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 15&gt;&gt;&lt;&lt;set $DevozSlot15 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 16&gt;&gt;&lt;&lt;set $DevozSlot16 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 17&gt;&gt;&lt;&lt;set $DevozSlot17 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 18&gt;&gt;&lt;&lt;set $DevozSlot18 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 19&gt;&gt;&lt;&lt;set $DevozSlot19 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 20&gt;&gt;&lt;&lt;set $DevozSlot20 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 21&gt;&gt;&lt;&lt;set $DevozSlot21 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 22&gt;&gt;&lt;&lt;set $DevozSlot22 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 23&gt;&gt;&lt;&lt;set $DevozSlot23 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 24&gt;&gt;&lt;&lt;set $DevozSlot24 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 25&gt;&gt;&lt;&lt;set $DevozSlot25 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 26&gt;&gt;&lt;&lt;set $DevozSlot26 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 27&gt;&gt;&lt;&lt;set $DevozSlot27 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 28&gt;&gt;&lt;&lt;set $DevozSlot28 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 29&gt;&gt;&lt;&lt;set $DevozSlot29 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 30&gt;&gt;&lt;&lt;set $DevozSlot30 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 31&gt;&gt;&lt;&lt;set $DevozSlot31 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 32&gt;&gt;&lt;&lt;set $DevozSlot32 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 33&gt;&gt;&lt;&lt;set $DevozSlot33 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 34&gt;&gt;&lt;&lt;set $DevozSlot34 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 35&gt;&gt;&lt;&lt;set $DevozSlot35 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 36&gt;&gt;&lt;&lt;set $DevozSlot36 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 37&gt;&gt;&lt;&lt;set $DevozSlot37 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 38&gt;&gt;&lt;&lt;set $DevozSlot38 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 39&gt;&gt;&lt;&lt;set $DevozSlot39 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 40&gt;&gt;&lt;&lt;set $DevozSlot40 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 41&gt;&gt;&lt;&lt;set $DevozSlot41 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 42&gt;&gt;&lt;&lt;set $DevozSlot42 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 43&gt;&gt;&lt;&lt;set $DevozSlot43 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 44&gt;&gt;&lt;&lt;set $DevozSlot44 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 45&gt;&gt;&lt;&lt;set $DevozSlot45 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 46&gt;&gt;&lt;&lt;set $DevozSlot46 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 47&gt;&gt;&lt;&lt;set $DevozSlot47 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 48&gt;&gt;&lt;&lt;set $DevozSlot48 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 49&gt;&gt;&lt;&lt;set $DevozSlot49 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 50&gt;&gt;&lt;&lt;set $DevozSlot50 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 51&gt;&gt;&lt;&lt;set $DevozSlot51 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 52&gt;&gt;&lt;&lt;set $DevozSlot52 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 53&gt;&gt;&lt;&lt;set $DevozSlot53 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 54&gt;&gt;&lt;&lt;set $DevozSlot54 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 55&gt;&gt;&lt;&lt;set $DevozSlot55 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 56&gt;&gt;&lt;&lt;set $DevozSlot56 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 57&gt;&gt;&lt;&lt;set $DevozSlot57 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 58&gt;&gt;&lt;&lt;set $DevozSlot58 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 59&gt;&gt;&lt;&lt;set $DevozSlot59 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 60&gt;&gt;&lt;&lt;set $DevozSlot60 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 61&gt;&gt;&lt;&lt;set $DevozSlot61 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 62&gt;&gt;&lt;&lt;set $DevozSlot62 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 63&gt;&gt;&lt;&lt;set $DevozSlot63 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 64&gt;&gt;&lt;&lt;set $DevozSlot64 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 65&gt;&gt;&lt;&lt;set $DevozSlot65 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 66&gt;&gt;&lt;&lt;set $DevozSlot66 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 67&gt;&gt;&lt;&lt;set $DevozSlot67 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 68&gt;&gt;&lt;&lt;set $DevozSlot68 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 69&gt;&gt;&lt;&lt;set $DevozSlot69 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 70&gt;&gt;&lt;&lt;set $DevozSlot70 to $opposing1&gt;&gt;
+&lt;&lt;elseif $devozId is 71&gt;&gt;&lt;&lt;set $DevozSlot71 to $opposing1&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;set $devozId += 1&gt;&gt;&lt;&lt;if $devozId &gt; $maxstorage&gt;&gt;&lt;br&gt;&lt;br&gt;Your storage is full! If you want to catch more Devozi, you need to release some of your pre-existing ones!&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Gym" tags="" position="1534,476" size="100,100">&lt;&lt;if $nearestHealing is &quot;Fruta&quot;&gt;&gt;&lt;&lt;if $VictoryAmulets.Fruta is true&gt;&gt;Bellwort: Oh, hello $name.
+
+Bellwort: If you haven&#39;t visited the orchard yet, please do so before you head further. They are worth the time, I promise!
+
+[[Leave the gym|Map]]&lt;&lt;else&gt;&gt;&lt;&lt;set $canflee to true&gt;&gt;When you get to the gym, the Gym Chief, Bellwort, is waiting for you.
 
 Bellwort: Another challenger? Man, what a day... Well, come at me with all you&#39;ve got, I guess.
 
-&lt;&lt;set $gymbattle to true&gt;&gt;&lt;&lt;set $opposing1 to $Sreen&gt;&gt;&lt;&lt;set $opposing2 to $Vinardy&gt;&gt;&lt;&lt;set $opponent to &quot;Fruta Chief Bellwort&quot;&gt;&gt;&lt;&lt;set $opponentDevoz to 2&gt;&gt;
+&lt;&lt;set $gymbattle to true&gt;&gt;&lt;&lt;set $opposing1 to $Sreen&gt;&gt;&lt;&lt;set $opposing2 to $Vinardy&gt;&gt;&lt;&lt;set $opponent to &quot;Fruta Chief Bellwort&quot;&gt;&gt;&lt;&lt;set $opponentDevoz to 2&gt;&gt;&lt;&lt;nobr&gt;&gt;
 
-&lt;&lt;set $opponentLevel to 12&gt;&gt;&lt;&lt;include &quot;Set opponent stats&quot;&gt;&gt;&lt;&lt;set _opp1 to $opposing1&gt;&gt;&lt;&lt;set $opposing1 to $opposing2&gt;&gt;&lt;&lt;include &quot;Set opponent stats&quot;&gt;&gt;&lt;&lt;set $opposing2 to $opposing1&gt;&gt;&lt;&lt;set $opposing1 to _opp1&gt;&gt;
+&lt;&lt;set $opponentLevel to 12&gt;&gt;&lt;&lt;include &quot;Set opponent stats&quot;&gt;&gt;&lt;&lt;set _opp1 to $opposing1&gt;&gt;&lt;&lt;set $opposing1 to $opposing2&gt;&gt;&lt;&lt;include &quot;Set opponent stats&quot;&gt;&gt;&lt;&lt;set $opposing2 to $opposing1&gt;&gt;&lt;&lt;set $opposing1 to _opp1&gt;&gt;&lt;&lt;set $opponentDevozi to 2&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 
-&lt;&lt;include &quot;Battle start&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Gym victory" tags="" position="643,828" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;if $nearestHealing is &quot;Fruta&quot;&gt;&gt;&lt;&lt;set $VictoryAmulets.Fruta to true&gt;&gt;Bellwort: Congratulations on your victory! Here is Fruta Gym&#39;s victory amulet.&lt;br&gt;&lt;br&gt;You received the Fruta Gym victory amulet and put it into the victory amulet case.&lt;br&gt;&lt;br&gt;Bellwort: If you haven&#39;t visited the orchard yet, please do so before you head further. They are worth the time, I promise!
-&lt;&lt;elseif $nearestHealing is &quot;Oasla&quot;&gt;&gt;&lt;&lt;set $VictoryAmulets.Oasla to true&gt;&gt;
-&lt;&lt;elseif $nearestHealing is &quot;Empyra&quot;&gt;&gt;&lt;&lt;set $VictoryAmulets.Empyra to true&gt;&gt;
-&lt;&lt;elseif $nearestHealing is &quot;Gemral&quot;&gt;&gt;&lt;&lt;set $VictoryAmulets.Gemral to true&gt;&gt;
-&lt;&lt;elseif $nearestHealing is &quot;Sterrum&quot;&gt;&gt;&lt;&lt;set $VictoryAmulets.Sterrum to true&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;else&gt;&gt;Something went wrong? Contact the dev and tell that your opponent was $opponent, location was $location and nearest healing was $nearestHealing.&lt;br&gt;&lt;br&gt;$opponent: Congratulations on your victory! Now scram before the next challenger comes up!&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;include &quot;Battle start&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;else&gt;&gt;Gym unavailable. [[Go back|Map]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Gym victory" tags="" position="901,811" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;if $nearestHealing is &quot;Fruta&quot;&gt;&gt;&lt;&lt;set $VictoryAmulets.Fruta to true&gt;&gt;Bellwort: Congratulations on your victory! Here is Fruta Gym&#39;s victory amulet.&lt;br&gt;&lt;br&gt;You received the Fruta Gym victory amulet and put it into the victory amulet case.&lt;br&gt;&lt;br&gt;Bellwort: If you haven&#39;t visited the orchard yet, please do so before you head further. They are worth the time, I promise!
+&lt;&lt;elseif $nearestHealing is &quot;Oasla&quot;&gt;&gt;&lt;&lt;set $VictoryAmulets.Oasla to true&gt;&gt;Oasla victory text here
+&lt;&lt;elseif $nearestHealing is &quot;Empyra&quot;&gt;&gt;&lt;&lt;set $VictoryAmulets.Empyra to true&gt;&gt;Empyra victory text here
+&lt;&lt;elseif $nearestHealing is &quot;Gemral&quot;&gt;&gt;&lt;&lt;set $VictoryAmulets.Gemral to true&gt;&gt;Gemral victory text here
+&lt;&lt;elseif $nearestHealing is &quot;Sterrum&quot;&gt;&gt;&lt;&lt;set $VictoryAmulets.Sterrum to true&gt;&gt;Sterrum victory text here
+&lt;&lt;else&gt;&gt;Something went wrong? Contact the dev and tell that your opponent was $opponent, location was $location and nearest healing was $nearestHealing.&lt;br&gt;&lt;br&gt;$opponent: Congratulations on your victory! Now scram before the next challenger comes up!&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 
-&lt;&lt;include &quot;Map&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="Next Opponent Devoz" tags="" position="251,1324" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $adebuff to 0&gt;&gt;&lt;&lt;set $ddebuff to 0&gt;&gt;&lt;&lt;set $sdebuff to 0&gt;&gt;&lt;&lt;set _OpponentDevoz to $opposing1&gt;&gt;
+[[Leave the gym|Map]]</tw-passagedata><tw-passagedata pid="40" name="Next Opponent Devoz" tags="" position="251,1324" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $adebuff to 0&gt;&gt;&lt;&lt;set $ddebuff to 0&gt;&gt;&lt;&lt;set $sdebuff to 0&gt;&gt;&lt;&lt;set _OpponentDevoz to $opposing1&gt;&gt;
 &lt;&lt;if $opponentFainted is 1&gt;&gt;&lt;&lt;set $opposing1 to $opposing2&gt;&gt;&lt;&lt;set $opposing2 to _OpponentDevoz&gt;&gt;
 &lt;&lt;elseif $opponentFainted is 2&gt;&gt;&lt;&lt;set $opposing1 to $opposing3&gt;&gt;&lt;&lt;set $opposing3 to _OpponentDevoz&gt;&gt;
 &lt;&lt;elseif $opponentFainted is 3&gt;&gt;&lt;&lt;set $opposing1 to $opposing4&gt;&gt;&lt;&lt;set $opposing4 to _OpponentDevoz&gt;&gt;
 &lt;&lt;elseif $opponentFainted is 4&gt;&gt;&lt;&lt;set $opposing1 to $opposing5&gt;&gt;&lt;&lt;set $opposing5 to _OpponentDevoz&gt;&gt;
-&lt;&lt;elseif $opponentFainted is 5&gt;&gt;&lt;&lt;set $opposing1 to $opposing6&gt;&gt;&lt;&lt;set $opposing6 to _OpponentDevoz&gt;&gt;&lt;&lt;else&gt;&gt;WTF IS GOING ON&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;&lt;if $opponentDevozi isnot 0&gt;&gt;
+&lt;&lt;elseif $opponentFainted is 5&gt;&gt;&lt;&lt;set $opposing1 to $opposing6&gt;&gt;&lt;&lt;set $opposing6 to _OpponentDevoz&gt;&gt;&lt;&lt;else&gt;&gt;Something went wrong. Please contact the dev. opponentFainted is: $opponentFainted&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;&lt;if $opponentDevozi isnot 0&gt;&gt;
 
-$opponent sent out $opposing1.name!&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Gain EXP" tags="" position="501,1322" size="100,100">$BattleDevoz.name got 25 EXP!&lt;&lt;set $BattleDevoz.exp += 25&gt;&gt;&lt;&lt;if $BattleDevoz.exp gt 60&gt;&gt; Level up!&lt;&lt;set $BattleDevoz.exp -= 60&gt;&gt;&lt;&lt;set $BattleDevoz.level +=1&gt;&gt;&lt;&lt;set $BattleDevoz.hp +=1&gt;&gt;&lt;&lt;set $BattleDevoz.maxhp +=1&gt;&gt;&lt;&lt;set $BattleDevoz.attack +=1&gt;&gt;&lt;&lt;set $BattleDevoz.defense +=1&gt;&gt;&lt;&lt;set $BattleDevoz.speed +=1&gt;&gt;&lt;&lt;include &quot;Check new move&quot;&gt;&gt;&lt;&lt;include &quot;Check Evolution&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Next Own Devoz" tags="" position="382,1327" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $abuff to 0&gt;&gt;&lt;&lt;set $dbuff to 0&gt;&gt;&lt;&lt;set $sbuff to 0&gt;&gt;&lt;&lt;if $OwnFainted is 1&gt;&gt;&lt;&lt;set $team1 to $team2&gt;&gt;&lt;&lt;set $team2 to $BattleDevoz&gt;&gt;
+$opponent sent out $opposing1.name!&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Gain EXP" tags="" position="501,1323" size="100,100">$BattleDevoz.name got $experience EXP!&lt;&lt;set $BattleDevoz.exp += $experience&gt;&gt;&lt;&lt;if $BattleDevoz.exp &gt;= 60&gt;&gt; Level up!&lt;&lt;set $BattleDevoz.exp -= 60&gt;&gt;&lt;&lt;set $BattleDevoz.level +=1&gt;&gt;&lt;&lt;set $BattleDevoz.hp +=1&gt;&gt;&lt;&lt;set $BattleDevoz.maxhp +=1&gt;&gt;&lt;&lt;set $BattleDevoz.attack +=1&gt;&gt;&lt;&lt;set $BattleDevoz.defense +=1&gt;&gt;&lt;&lt;set $BattleDevoz.speed +=1&gt;&gt;&lt;&lt;include &quot;Check new move&quot;&gt;&gt;&lt;&lt;include &quot;Check Evolution&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Next Own Devoz" tags="" position="382,1328" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $abuff to 0&gt;&gt;&lt;&lt;set $dbuff to 0&gt;&gt;&lt;&lt;set $sbuff to 0&gt;&gt;&lt;&lt;if $OwnFainted is 1&gt;&gt;&lt;&lt;set $team1 to $team2&gt;&gt;&lt;&lt;set $team2 to $BattleDevoz&gt;&gt;
 &lt;&lt;elseif $OwnFainted is 2&gt;&gt;&lt;&lt;set $team1 to $team3&gt;&gt;&lt;&lt;set $team3 to $BattleDevoz&gt;&gt;
 &lt;&lt;elseif $OwnFainted is 3&gt;&gt;&lt;&lt;set $team1 to $team4&gt;&gt;&lt;&lt;set $team4 to $BattleDevoz&gt;&gt;
 &lt;&lt;elseif $OwnFainted is 4&gt;&gt;&lt;&lt;set $team1 to $team5&gt;&gt;&lt;&lt;set $team5 to $BattleDevoz&gt;&gt;
@@ -951,15 +957,15 @@ Done!&lt;br&gt;&lt;br&gt;
 &lt;&lt;else&gt;&gt;[[Cancel|Map]]&lt;&lt;/if&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Switch out" tags="" position="245,321" size="100,100">&lt;&lt;include &quot;Change Team Composition&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Select from Devozi Storage" tags="" position="155,675" size="100,100">All your Devozi:
 
 0: &lt;&lt;if $DevozSlot0.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot0.name $DevozSlot0.level $DevozSlot0.exp $DevozSlot0.hp $DevozSlot0.maxhp&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
-1: &lt;&lt;if $DevozSlot1.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot1.name $DevozSlot1.level $DevozSlot1.exp $DevozSlot1.hp $DevozSlot1.maxhp&gt;&gt;&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
-2: &lt;&lt;if $DevozSlot2.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot2.name $DevozSlot2.level $DevozSlot2.exp $DevozSlot2.hp $DevozSlot2.maxhp&gt;&gt;&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
-3: &lt;&lt;if $DevozSlot3.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot3.name $DevozSlot3.level $DevozSlot3.exp $DevozSlot3.hp $DevozSlot3.maxhp&gt;&gt;&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
-4: &lt;&lt;if $DevozSlot4.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot4.name $DevozSlot4.level $DevozSlot4.exp $DevozSlot4.hp $DevozSlot4.maxhp&gt;&gt;&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
-5: &lt;&lt;if $DevozSlot5.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot5.name $DevozSlot5.level $DevozSlot5.exp $DevozSlot5.hp $DevozSlot5.maxhp&gt;&gt;&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
-6: &lt;&lt;if $DevozSlot6.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot6.name $DevozSlot6.level $DevozSlot6.exp $DevozSlot6.hp $DevozSlot6.maxhp&gt;&gt;&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
-7: &lt;&lt;if $DevozSlot7.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot7.name $DevozSlot7.level $DevozSlot7.exp $DevozSlot7.hp $DevozSlot7.maxhp&gt;&gt;&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
-8: &lt;&lt;if $DevozSlot8.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot8.name $DevozSlot8.level $DevozSlot8.exp $DevozSlot8.hp $DevozSlot8.maxhp&gt;&gt;&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
-9: &lt;&lt;if $DevozSlot9.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot9.name $DevozSlot9.level $DevozSlot9.exp $DevozSlot9.hp $DevozSlot9.maxhp&gt;&gt;&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
+1: &lt;&lt;if $DevozSlot1.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot1.name $DevozSlot1.level $DevozSlot1.exp $DevozSlot1.hp $DevozSlot1.maxhp&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
+2: &lt;&lt;if $DevozSlot2.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot2.name $DevozSlot2.level $DevozSlot2.exp $DevozSlot2.hp $DevozSlot2.maxhp&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
+3: &lt;&lt;if $DevozSlot3.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot3.name $DevozSlot3.level $DevozSlot3.exp $DevozSlot3.hp $DevozSlot3.maxhp&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
+4: &lt;&lt;if $DevozSlot4.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot4.name $DevozSlot4.level $DevozSlot4.exp $DevozSlot4.hp $DevozSlot4.maxhp&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
+5: &lt;&lt;if $DevozSlot5.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot5.name $DevozSlot5.level $DevozSlot5.exp $DevozSlot5.hp $DevozSlot5.maxhp&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
+6: &lt;&lt;if $DevozSlot6.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot6.name $DevozSlot6.level $DevozSlot6.exp $DevozSlot6.hp $DevozSlot6.maxhp&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
+7: &lt;&lt;if $DevozSlot7.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot7.name $DevozSlot7.level $DevozSlot7.exp $DevozSlot7.hp $DevozSlot7.maxhp&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
+8: &lt;&lt;if $DevozSlot8.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot8.name $DevozSlot8.level $DevozSlot8.exp $DevozSlot8.hp $DevozSlot8.maxhp&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
+9: &lt;&lt;if $DevozSlot9.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot9.name $DevozSlot9.level $DevozSlot9.exp $DevozSlot9.hp $DevozSlot9.maxhp&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
 10: &lt;&lt;if $DevozSlot10.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot10.name $DevozSlot10.level $DevozSlot10.exp $DevozSlot10.hp $DevozSlot10.maxhp&gt;&gt;&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
 11: &lt;&lt;if $DevozSlot11.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot11.name $DevozSlot11.level $DevozSlot11.exp $DevozSlot11.hp $DevozSlot11.maxhp&gt;&gt;&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
 12: &lt;&lt;if $DevozSlot12.name is not &quot;empty slot&quot;&gt;&gt;$DevozSlot12.name $DevozSlot12.level $DevozSlot12.exp $DevozSlot12.hp $DevozSlot12.maxhp&gt;&gt;&lt;&lt;else&gt;&gt;Empty slot&lt;&lt;/if&gt;&gt;
@@ -1039,7 +1045,7 @@ Done!&lt;br&gt;&lt;br&gt;
 
 &lt;&lt;linkappend &quot;Confirm&quot;&gt;&gt;
 
-&lt;&lt;display &quot;Change stored&quot;&gt;&gt;&lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Change stored" tags="" position="235,443" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set _failure to false&gt;&gt;&lt;&lt;set _team to $teamhelper&gt;&gt;&lt;&lt;set _storage to $storagehelper&gt;&gt;&lt;&lt;if $teamhelper is 1&gt;&gt;&lt;&lt;set $teamhelper to $team1&gt;&gt;
+&lt;&lt;display &quot;Change stored&quot;&gt;&gt;&lt;&lt;/linkappend&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Change stored" tags="" position="234,443" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set _failure to false&gt;&gt;&lt;&lt;set _team to $teamhelper&gt;&gt;&lt;&lt;set _storage to $storagehelper&gt;&gt;&lt;&lt;if $teamhelper is 1&gt;&gt;&lt;&lt;set $teamhelper to $team1&gt;&gt;
 &lt;&lt;elseif $teamhelper is 2&gt;&gt;&lt;&lt;set $teamhelper to $team2&gt;&gt;
 &lt;&lt;elseif $teamhelper is 3&gt;&gt;&lt;&lt;set $teamhelper to $team3&gt;&gt;
 &lt;&lt;elseif $teamhelper is 4&gt;&gt;&lt;&lt;set $teamhelper to $team4&gt;&gt;
@@ -1120,7 +1126,7 @@ Done!&lt;br&gt;&lt;br&gt;
 &lt;&lt;elseif $storagehelper is 71&gt;&gt;&lt;&lt;set $storagehelper to $DevozSlot71&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;set _failure to true&gt;&gt;&lt;&lt;/if&gt;&gt;
 
-&lt;&lt;if _failure is true || $storagehelper.id is $teamhelper.id || storagehelper.name is &quot;empty slot&quot;&gt;&gt;
+&lt;&lt;if _failure is true || $storagehelper.id is $teamhelper.id || $storagehelper.name is &quot;empty slot&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;if _team is 1&gt;&gt;&lt;&lt;set $team1 to $storagehelper&gt;&gt;
 &lt;&lt;elseif _team is 2&gt;&gt;&lt;&lt;set $team2 to $storagehelper&gt;&gt;
 &lt;&lt;elseif _team is 3&gt;&gt;&lt;&lt;set $team3 to $storagehelper&gt;&gt;
@@ -1204,7 +1210,7 @@ Done!&lt;br&gt;&lt;br&gt;
 Done!
 
 [[Reload|Select from Devozi Storage]]
-[[Leave|Change Team Composition]]</tw-passagedata><tw-passagedata pid="48" name="Set opponent stats" tags="" position="1297,84" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $opposing1.level to $opponentLevel&gt;&gt;&lt;&lt;set $opposing1.hp += $opponentLevel&gt;&gt;&lt;&lt;set $opposing1.maxhp += $opponentLevel&gt;&gt;&lt;&lt;set $opposing1.attack += $opponentLevel&gt;&gt;&lt;&lt;set $opposing1.defense += $opponentLevel&gt;&gt;&lt;&lt;set $opposing1.speed += $opponentLevel&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Check new move" tags="" position="615,1323" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set _newMove to $nullMove&gt;&gt;&lt;&lt;if $BattleDevoz.level is 6&gt;&gt;&lt;&lt;set $BattleDevoz.move3 to $WallUp&gt;&gt;$BattleDevoz.name learned $WallUp.name!
+[[Leave|Change Team Composition]]</tw-passagedata><tw-passagedata pid="48" name="Set opponent stats" tags="" position="1297,84" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $opposing1.level to $opponentLevel&gt;&gt;&lt;&lt;set $opposing1.hp to  $opposing1.hp+$opponentLevel&gt;&gt;&lt;&lt;set $opposing1.maxhp to $opposing1.maxhp+$opponentLevel&gt;&gt;&lt;&lt;set $opposing1.attack to $opposing1.attack+$opponentLevel&gt;&gt;&lt;&lt;set $opposing1.defense to $opposing1.defense+$opponentLevel&gt;&gt;&lt;&lt;set $opposing1.speed to $opposing1.speed+$opponentLevel&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="49" name="Check new move" tags="" position="612,1324" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set _newMove to $nullMove&gt;&gt;&lt;&lt;if $BattleDevoz.level is 6&gt;&gt;&lt;&lt;set $BattleDevoz.move3 to $WallUp&gt;&gt;$BattleDevoz.name learned $WallUp.name!
 &lt;&lt;elseif $BattleDevoz.level is 8&gt;&gt;&lt;&lt;set $BattleDevoz.move4 to $LightenUp&gt;&gt;$BattleDevoz.name learned $LightenUp.name!
 &lt;&lt;elseif $BattleDevoz.level is 10&gt;&gt;
 &lt;&lt;if $BattleDevoz.type is &quot;Wood&quot;&gt;&gt;&lt;&lt;set _newMove to $TrunkFall &gt;&gt;
@@ -1236,19 +1242,19 @@ Done!
 
 &lt;&lt;/nobr&gt;&gt;&lt;&lt;if _newMove isnot $nullMove&gt;&gt;Your Devoz already knows four moves. It needs to forget one of them to learn the new move. Which move will be forgotten?
 
-&lt;&lt;radiobutton &quot;$MoveIndex&quot; &quot;1&quot; autocheck&gt;&gt; $BattleDevoz.move1.name
-&lt;&lt;radiobutton &quot;$MoveIndex&quot; &quot;2&quot; autocheck&gt;&gt; $BattleDevoz.move2.name
-&lt;&lt;radiobutton &quot;$MoveIndex&quot; &quot;3&quot; autocheck&gt;&gt; $BattleDevoz.move3.name
-&lt;&lt;radiobutton &quot;$MoveIndex&quot; &quot;4&quot; autocheck&gt;&gt; $BattleDevoz.move4.name
-&lt;&lt;radiobutton &quot;$MoveIndex&quot; &quot;0&quot; autocheck&gt;&gt; _newMove.name
+&lt;&lt;radiobutton &quot;$MoveIndex&quot; 1 autocheck&gt;&gt; $BattleDevoz.move1.name
+&lt;&lt;radiobutton &quot;$MoveIndex&quot; 2 autocheck&gt;&gt; $BattleDevoz.move2.name
+&lt;&lt;radiobutton &quot;$MoveIndex&quot; 3 autocheck&gt;&gt; $BattleDevoz.move3.name
+&lt;&lt;radiobutton &quot;$MoveIndex&quot; 4 autocheck&gt;&gt; $BattleDevoz.move4.name
+&lt;&lt;radiobutton &quot;$MoveIndex&quot; 0 autocheck&gt;&gt; _newMove.name
 
 &lt;&lt;linkappend &quot;Confirm&quot;&gt;&gt;
 
 &lt;&lt;nobr&gt;&gt;&lt;&lt;if $MoveIndex is 0&gt;&gt;$BattleDevoz.name did not learn _newMove.name.
-&lt;&lt;elseif MoveIndex is 1&gt;&gt;&lt;&lt;set $BattleDevoz.move1 to _newMove&gt;&gt;$BattleDevoz.name forgot $BattleDevoz.move1.name and learned _newMove.name.
-&lt;&lt;elseif MoveIndex is 2&gt;&gt;&lt;&lt;set $BattleDevoz.move2 to _newMove&gt;&gt;$BattleDevoz.name forgot $BattleDevoz.move2.name and learned _newMove.name.
-&lt;&lt;elseif MoveIndex is 3&gt;&gt;&lt;&lt;set $BattleDevoz.move3 to _newMove&gt;&gt;$BattleDevoz.name forgot $BattleDevoz.move3.name and learned _newMove.name.
-&lt;&lt;elseif MoveIndex is 4&gt;&gt;&lt;&lt;set $BattleDevoz.move4 to _newMove&gt;&gt;$BattleDevoz.name forgot $BattleDevoz.move4.name and learned _newMove.name.&lt;&lt;/if&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Buy items" tags="" position="1467,883" size="100,100">Money: $money
+&lt;&lt;elseif $MoveIndex is 1&gt;&gt;$BattleDevoz.name forgot $BattleDevoz.move1.name and learned _newMove.name.&lt;&lt;set $BattleDevoz.move1 to _newMove&gt;&gt;
+&lt;&lt;elseif $MoveIndex is 2&gt;&gt;$BattleDevoz.name forgot $BattleDevoz.move2.name and learned _newMove.name.&lt;&lt;set $BattleDevoz.move2 to _newMove&gt;&gt;
+&lt;&lt;elseif $MoveIndex is 3&gt;&gt;$BattleDevoz.name forgot $BattleDevoz.move3.name and learned _newMove.name.&lt;&lt;set $BattleDevoz.move3 to _newMove&gt;&gt;
+&lt;&lt;elseif $MoveIndex is 4&gt;&gt;$BattleDevoz.name forgot $BattleDevoz.move4.name and learned _newMove.name.&lt;&lt;set $BattleDevoz.move4 to _newMove&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;&lt;/linkappend&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Buy items" tags="" position="1467,883" size="100,100">Money: $money
 
 Catching amulets - price: $CatchingAmuletPrice &lt;&lt;numberbox &quot;$buyamulet&quot; 0&gt;&gt; (you already have $amulets)
 Potions - price: $PotionPrice &lt;&lt;numberbox &quot;$buypotion&quot; 0&gt;&gt; (you already have $potions)
@@ -1380,7 +1386,7 @@ Potions: $potions
 &lt;&lt;elseif $BattleDevoz.tier is $tiers.mi&gt;&gt;&lt;&lt;if ($BattleDevoz.level &gt;= 16 &amp;&amp; $BattleDevoz.stage is 1) || ($BattleDevoz.level &gt;= 35 &amp;&amp; $BattleDevoz.stage is 2)&gt;&gt;&lt;&lt;include Evolution&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $BattleDevoz.tier is $tiers.b1&gt;&gt;&lt;&lt;if ($BattleDevoz.level &gt;= 12 &amp;&amp; $BattleDevoz.stage is 1) || ($BattleDevoz.level &gt;= 27 &amp;&amp; $BattleDevoz.stage is 2)&gt;&gt;&lt;&lt;include Evolution&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $BattleDevoz.tier is $tiers.b2&gt;&gt;&lt;&lt;if $BattleDevoz.level &gt;= 21 &amp;&amp; $BattleDevoz.stage is 1&gt;&gt;&lt;&lt;include Evolution&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="Evolution" tags="" position="734,1321" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;if $BattleDevoz.name not $BattleDevoz.speciesname&gt;&gt;&lt;&lt;set _newName to false&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set _newName to true&gt;&gt;&lt;&lt;/if&gt;&gt;
+&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="63" name="Evolution" tags="" position="734,1321" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;if $BattleDevoz.name isnot $BattleDevoz.speciesname&gt;&gt;&lt;&lt;set _newName to false&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set _newName to true&gt;&gt;&lt;&lt;/if&gt;&gt;
 
 Your Devoz is shining. Could it... could it be evolving?
 &lt;&lt;if $BattleDevoz.speciesname is &quot;Seeround&quot;&gt;&gt;&lt;&lt;set $BattleDevoz.speciesname to &quot;Linground&quot;&gt;&gt;
@@ -1426,7 +1432,7 @@ Your Devoz is shining. Could it... could it be evolving?
 &lt;&lt;elseif $BattleDevoz.speciesname is &quot;Platal&quot;&gt;&gt;&lt;&lt;set $BattleDevoz.speciesname to &quot;Chromtal&quot;&gt;&gt;
 &lt;&lt;elseif $BattleDevoz.speciesname is &quot;Chromtal&quot;&gt;&gt;&lt;&lt;set $BattleDevoz.speciesname to &quot;Iriniumtal&quot;&gt;&gt;
 &lt;&lt;elseif $BattleDevoz.speciesname is &quot;Fierth&quot;&gt;&gt;&lt;&lt;set $BattleDevoz.speciesname to &quot;Eartope&quot;&gt;&gt;
-&lt;&lt;elseif $BattleDevoz.speciesname is &quot;Eartope&quot;&gt;&gt;&lt;&lt;set $BattleDevoz.speciesname to &quot;Mountaerth&quot;&gt;&gt;&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;elseif $BattleDevoz.speciesname is &quot;Eartope&quot;&gt;&gt;&lt;&lt;set $BattleDevoz.speciesname to &quot;Mountaerth&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 
 Congratulations! Your Devoz evolved into $BattleDevoz.speciesname!&lt;&lt;set $BattleDevoz.stage += 1&gt;&gt;&lt;&lt;set $BattleDevoz.hp += 25&gt;&gt;&lt;&lt;set $BattleDevoz.maxhp += 25&gt;&gt;&lt;&lt;set $BattleDevoz.attack += 25&gt;&gt;&lt;&lt;set $BattleDevoz.defense += 25&gt;&gt;&lt;&lt;set $BattleDevoz.speed += 25&gt;&gt;
 
@@ -1633,11 +1639,50 @@ Congratulations! Your Devoz evolved into $BattleDevoz.speciesname!&lt;&lt;set $B
 
 &lt;&lt;if _success is true&gt;&gt;&lt;&lt;set _change to $heal.maxhp-$heal.hp&gt;&gt;&lt;&lt;if _change &gt; $PotionEffect&gt;&gt;&lt;&lt;set _change to $PotionEffect&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;set $potions -= 1&gt;&gt;&lt;&lt;set $heal.hp += $PotionEffect&gt;&gt;&lt;&lt;if $heal.hp &gt; $heal.maxhp&gt;&gt;&lt;&lt;set $heal.hp to $heal.maxhp&gt;&gt;&lt;&lt;/if&gt;&gt;
 
-$heal.name was healed by _change HP.&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Testing restoration zone" tags="" position="25,319" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $Seeround to { id: 0, speciesname : &quot;Seeround&quot; , name : &quot;Seeround&quot;, type: &quot;Wood&quot;, level: 0, exp: 0, hp : 60, maxhp : 10, attack: 10, defense: 10, speed: 10, move1 : $VineSlam, move2 : $BuffUp, move3 : $nullMove, move4 : $nullMove, tier: $tiers.st, stage: 1 }&gt;&gt;
+$heal.name was healed by _change HP.&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="68" name="Testing restoration zone" tags="" position="24,318" size="100,100">&lt;&lt;nobr&gt;&gt;
 
-&lt;&lt;set $emptyDevozSlot to { name : &quot;empty slot&quot;, hp: 0, maxhp: 0, move1 : $nullMove, move2 : $nullMove, move3 : $nullMove, move4 : $nullMove }&gt;&gt;
+&lt;&lt;set $emptyDevozSlot to { id: -1, name : &quot;empty slot&quot;, hp: 0, maxhp: 0, move1 : $nullMove, move2 : $nullMove, move3 : $nullMove, move4 : $nullMove }&gt;&gt;
 
-&lt;&lt;set $team3 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot32 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot33 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot34 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot35 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot36 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot37 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot38 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot39 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot40 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot41 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot42 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot43 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot44 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot45 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot46 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot47 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot48 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot49 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot50 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot51 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot52 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot53 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot54 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot55 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot56 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot57 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot58 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot59 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot60 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot61 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot62 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot63 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot64 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot65 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot66 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot67 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot68 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot69 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot70 to $emptyDevozSlot&gt;&gt;
+&lt;&lt;set $DevozSlot71 to $emptyDevozSlot&gt;&gt;
 &lt;&lt;set $team4 to $emptyDevozSlot&gt;&gt;
 &lt;&lt;set $team5 to $emptyDevozSlot&gt;&gt;
 &lt;&lt;set $team6 to $emptyDevozSlot&gt;&gt;
@@ -1727,7 +1772,86 @@ $heal.name was healed by _change HP.&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw
 &lt;&lt;elseif $releasehelper is $DevozSlot68&gt;&gt;&lt;&lt;set $DevozSlot68 to $emptyDevozSlot&gt;&gt;
 &lt;&lt;elseif $releasehelper is $DevozSlot69&gt;&gt;&lt;&lt;set $DevozSlot69 to $emptyDevozSlot&gt;&gt;
 &lt;&lt;elseif $releasehelper is $DevozSlot70&gt;&gt;&lt;&lt;set $DevozSlot70 to $emptyDevozSlot&gt;&gt;
-&lt;&lt;elseif $releasehelper is $DevozSlot71&gt;&gt;&lt;&lt;set $DevozSlot71 to $emptyDevozSlot&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata></tw-storydata>
+&lt;&lt;elseif $releasehelper is $DevozSlot71&gt;&gt;&lt;&lt;set $DevozSlot71 to $emptyDevozSlot&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="70" name="Update Slots" tags="" position="632,833" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;if $DevozSlot0.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot0 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot1.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot1 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot2.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot2 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot3.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot3 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot4.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot4 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot5.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot5 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot6.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot6 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot7.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot7 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot8.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot8 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot9.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot9 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot10.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot10 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot11.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot11 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot12.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot12 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot13.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot13 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot14.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot14 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot15.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot15 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot16.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot16 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot17.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot17 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot18.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot18 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot19.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot19 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot20.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot20 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot21.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot21 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot22.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot22 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot23.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot23 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot24.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot24 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot25.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot25 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot26.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot26 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot27.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot27 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot28.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot28 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot29.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot29 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot30.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot30 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot31.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot31 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot32.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot32 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot33.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot33 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot34.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot34 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot35.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot35 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot36.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot36 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot37.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot37 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot38.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot38 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot39.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot39 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot40.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot40 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot41.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot41 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot42.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot42 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot43.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot43 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot44.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot44 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot45.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot45 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot46.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot46 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot47.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot47 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot48.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot48 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot49.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot49 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot50.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot50 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot51.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot51 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot52.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot52 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot53.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot53 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot54.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot54 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot55.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot55 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot56.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot56 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot57.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot57 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot58.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot58 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot59.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot59 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot60.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot60 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot61.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot61 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot62.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot62 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot63.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot63 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot64.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot64 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot65.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot65 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot66.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot66 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot67.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot67 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot68.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot68 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot69.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot69 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot70.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot70 to $updatehelper&gt;&gt;
+&lt;&lt;elseif $DevozSlot71.id is $updatehelper.id&gt;&gt;&lt;&lt;set $DevozSlot71 to $updatehelper&gt;&gt;
+&lt;&lt;else&gt;&gt;Update failed! Let the dev know. The Devoz&#39;s id is $updatehelper.id.&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="Afterbattle Update" tags="" position="786,961" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $team1 to $BattleDevoz&gt;&gt;&lt;&lt;set $Battling to false&gt;&gt;
+&lt;&lt;set $updatehelper to $team1&gt;&gt;&lt;&lt;include &quot;Update Slots&quot;&gt;&gt;
+&lt;&lt;set $updatehelper to $team2&gt;&gt;&lt;&lt;include &quot;Update Slots&quot;&gt;&gt;
+&lt;&lt;set $updatehelper to $team3&gt;&gt;&lt;&lt;include &quot;Update Slots&quot;&gt;&gt;
+&lt;&lt;set $updatehelper to $team4&gt;&gt;&lt;&lt;include &quot;Update Slots&quot;&gt;&gt;
+&lt;&lt;set $updatehelper to $team5&gt;&gt;&lt;&lt;include &quot;Update Slots&quot;&gt;&gt;
+&lt;&lt;set $updatehelper to $team6&gt;&gt;&lt;&lt;include &quot;Update Slots&quot;&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},errorPrologRegExp=/^(?:(?:uncaught\s+(?:exception:\s+)?)?\w*(?:error|exception|_err):\s+)+/i,Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(errorPrologRegExp,"")+".":": unknown error."),"object"===(void 0===n?"undefined":_typeof(n))&&null!==n&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}(),Patterns=function(){var e=function(){var e=new Map([[" ","\\u0020"],["\f","\\f"],["\n","\\n"],["\r","\\r"],["\t","\\t"],["\v","\\v"],[" ","\\u00a0"],[" ","\\u1680"],["᠎","\\u180e"],[" ","\\u2000"],[" ","\\u2001"],[" ","\\u2002"],[" ","\\u2003"],[" ","\\u2004"],[" ","\\u2005"],[" ","\\u2006"],[" ","\\u2007"],[" ","\\u2008"],[" ","\\u2009"],[" ","\\u200a"],["\u2028","\\u2028"],["\u2029","\\u2029"],[" ","\\u202f"],[" ","\\u205f"],["　","\\u3000"],["\ufeff","\\ufeff"]]),t=/^\s$/,r="";return e.forEach(function(e,n){t.test(n)||(r+=e)}),r?"[\\s"+r+"]":"\\s"}(),t="[\\u0020\\f\\t\\v\\u00a0\\u1680\\u180e\\u2000-\\u200a\\u202f\\u205f\\u3000\\ufeff]",r="\\s"===e?"\\S":e.replace(/^\[/,"[^"),n="[0-9A-Z_a-z\\-\\u00c0-\\u00d6\\u00d8-\\u00f6\\u00f8-\\u00ff\\u0150\\u0170\\u0151\\u0171]",a=n.replace("\\-",""),i=function(){var e="(?:[\\x2D.0-9A-Z_a-z\\xB7\\xC0-\\xD6\\xD8-\\xF6\\xF8-\\u037D\\u037F-\\u1FFF\\u200C\\u200D\\u203F\\u2040\\u2070-\\u218F\\u2C00-\\u2FEF\\u3001-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFFD]|[\\uD800-\\uDB7F][\\uDC00-\\uDFFF])";return"[A-Za-z](?:"+e+"*-"+e+"*|[0-9A-Za-z]*)"}(),o=function(){return"("+n+"+)\\(([^\\)\\|\\n]+)\\):|"+t+"*("+n+"+)"+t+"*:([^;\\|\\n]+);|"+t+"*((?:[#.]"+n+"+"+t+"*)+);"}();return Object.freeze({space:e,spaceNoTerminator:t,lineTerminator:"[\\n\\r\\u2028\\u2029]",notSpace:r,anyChar:"(?:.|[\\n\\r\\u2028\\u2029])",anyLetter:n,anyLetterStrict:a,identifierFirstChar:"[$A-Z_a-z]",identifierNextChar:"[$0-9A-Z_a-z]",identifier:"[$A-Z_a-z][$0-9A-Z_a-z]*",variableSigil:"[$_]",variable:"[$_][$A-Z_a-z][$0-9A-Z_a-z]*",macroName:"[A-Za-z][\\w-]*|[=-]",templateName:"[A-Za-z][\\w-]*",htmlTagName:i,cssIdOrClassSigil:"[#.]",cssImage:"\\[[<>]?[Ii][Mm][Gg]\\[(?:\\s|\\S)*?\\]\\]+",inlineCss:o,url:"(?:file|https?|mailto|ftp|javascript|irc|news|data):[^\\s'\"]+"})}();!function(){function e(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n=void 0===t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var t=function(){function e(e,n){var a=String(e);if(!a)return a;switch(n){case"start":return t.test(a)?a.replace(t,""):a;case"end":return r.test(a)?a.replace(r,""):a;default:throw new Error('_trimString called with incorrect where parameter value: "'+n+'"')}}var t=new RegExp("^"+Patterns.space+Patterns.space+"*"),r=new RegExp(""+Patterns.space+Patterns.space+"*$");return e}();Array.prototype.flat||Object.defineProperty(Array.prototype,"flat",{configurable:!0,writable:!0,value:function(){function e(){if(null==this)throw new TypeError("Array.prototype.flat called on null or undefined");var t=0===arguments.length?1:Number(arguments[0])||0;return t<1?Array.prototype.slice.call(this):Array.prototype.reduce.call(this,function(r,n){return n instanceof Array?r.push.apply(r,_toConsumableArray(e.call(n,t-1))):r.push(n),r},[])}return e}()}),Array.prototype.flatMap||Object.defineProperty(Array.prototype,"flatMap",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatMap called on null or undefined");return Array.prototype.map.apply(this,arguments).flat()}}),Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(n===t||n!==n&&t!==t)return!0}return!1}}),Object.entries||Object.defineProperty(Object,"entries",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.entries object parameter must be an object");return Object.keys(e).map(function(t){return[t,e[t]]})}}),Object.fromEntries||Object.defineProperty(Object,"fromEntries",{configurable:!0,writable:!0,value:function(e){return Array.from(e).reduce(function(e,t){if(Object(t)!==t)throw new TypeError("Object.fromEntries iterable parameter must yield objects");return t[0]in e?Object.defineProperty(e,t[0],{configurable:!0,enumerable:!0,writable:!0,value:t[1]}):e[t[0]]=t[1],e},{})}}),Object.getOwnPropertyDescriptors||Object.defineProperty(Object,"getOwnPropertyDescriptors",{configurable:!0,writable:!0,value:function(e){if(null==e)throw new TypeError("Object.getOwnPropertyDescriptors object parameter is null or undefined");var t=Object(e);return Reflect.ownKeys(t).reduce(function(e,r){var n=Object.getOwnPropertyDescriptor(t,r);return void 0!==n&&(r in e?Object.defineProperty(e,r,{configurable:!0,enumerable:!0,writable:!0,value:n}):e[r]=n),e},{})}}),Object.values||Object.defineProperty(Object,"values",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)throw new TypeError("Object.values object parameter must be an object");return Object.keys(e).map(function(t){return e[t]})}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:e(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(t,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(t,10);return i<=a?n:n+e(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return t(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return t(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return t(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return t(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r)<0&&(r=0),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n)<0&&(n=e-1),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){return e[0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1))]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var e=Array.from(this);if(0===arguments.length)return e;var t=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),r=t.length;if(0===r)return e;for(var n=Array.prototype.indexOf,a=Array.prototype.push,i=0;i<r;++i){var o=t[i];-1===n.call(e,o)&&a.call(e,o)}return e}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;-1!==(r=e.call(this,t,r));)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.concat.apply([],arguments),r=t.length,n=[],a=0;a<e;++a)for(var i=this[a],o=0;o<r;++o){var s=t[o];if(i===s||i!==i&&s!==s){n.push(a);break}}for(var u=[],l=0,c=n.length;l<c;++l)u[l]=this[n[l]];for(var d=Array.prototype.splice,f=n.length-1;f>=0;--f)d.call(this,n[f],1);return u}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"deleteWith",{configurable:!0,writable:!0,value:function(e,t){if(null==this)throw new TypeError("Array.prototype.deleteWith called on null or undefined");if("function"!=typeof e)throw new Error("Array.prototype.deleteWith predicate parameter must be a function");var r=this.length>>>0;if(0===r)return[];for(var n=Array.prototype.splice,a=[],i=[],o=0;o<r;++o)e.call(t,this[o],o,this)&&(i.push(this[o]),a.push(o));for(var s=a.length-1;s>=0;--s)n.call(this,a[s],1);return i}}),Object.defineProperty(Array.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.first called on null or undefined");if(0!=this.length>>>0)return this[0]}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.last called on null or undefined");var e=this.length>>>0;if(0!==e)return this[e-1]}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do{a.push(n.call(this,_random(0,i--),1)[0])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){return this[0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)))]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do{o=_random(0,i)}while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var e=arguments.length;if(0===e)return this.length>>>0;for(var t=Array.prototype.indexOf,r=Array.prototype.unshift,n=0;n<e;++n){var a=arguments[n];-1===t.call(this,a)&&r.call(this,a)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function(e,t,r){var n=Number(e);return Number.isNaN(n)?NaN:n.clamp(t,r)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch(void 0===i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return-1!==String.prototype.indexOf.apply(this,arguments)}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;-1!==(n=t.call(this,e,n));)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"first",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.first called on null or undefined");return _getCodePointStartAndEnd(String(this),0).char}}),Object.defineProperty(String.prototype,"last",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.last called on null or undefined");var e=String(this);return _getCodePointStartAndEnd(e,e.length-1).char}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n)<0&&(a=0):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return void 0!==r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return-1===n?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_stringify",{value:JSON.stringify}),Object.defineProperty(JSON,"stringify",{configurable:!0,writable:!0,value:function(e,t,r){return JSON._real_stringify(e,function(e,r){var n=r;if("function"==typeof t)try{n=t(e,n)}catch(e){}return void 0===n&&(n=["(revive:eval)","undefined"]),n},r)}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.flat.call(this,1/0)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Opera:!t&&("object"===_typeof(window.operamini)||e.includes("opera mini")),Windows:t||/iemobile|wpdesktop/.test(e),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Opera||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null,u=e.includes("vivaldi");return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s,isVivaldi:u})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),r=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),n=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),a=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}(),i=function(){try{return"ontouchstart"in window||!!window.DocumentTouch&&document instanceof window.DocumentTouch||!!navigator.maxTouchPoints||!!navigator.msMaxTouchPoints}catch(e){}return!1}(),o=function(){try{for(var e=new Map([["transition","transitionend"],["MSTransition","msTransitionEnd"],["WebkitTransition","webkitTransitionEnd"],["MozTransition","transitionend"]]),t=[].concat(_toConsumableArray(e.keys())),r=document.createElement("div"),n=0;n<t.length;++n)if(r.style[t[n]]!==undefined)return e.get(t[n])}catch(e){}return!1}();return Object.freeze({audio:e,fileAPI:t,geolocation:r,mutationObserver:n,performance:a,touch:i,transitionEndEvent:o})}(),Visibility=function(){function e(){return a}function t(){return a&&document[a.stateProperty]||"visible"}function r(){return Boolean(a)}function n(){return Boolean(a&&document[a.hiddenProperty])}var a=function(){try{return Object.freeze([{hiddenProperty:"hidden",stateProperty:"visibilityState",changeEvent:"visibilitychange"},{hiddenProperty:"webkitHidden",stateProperty:"webkitVisibilityState",changeEvent:"webkitvisibilitychange"},{hiddenProperty:"mozHidden",stateProperty:"mozVisibilityState",changeEvent:"mozvisibilitychange"},{hiddenProperty:"msHidden",stateProperty:"msVisibilityState",changeEvent:"msvisibilitychange"}].find(function(e){return e.hiddenProperty in document}))}catch(e){}return undefined}();return Object.freeze(Object.defineProperties({},{vendor:{get:e},state:{get:t},isEnabled:{value:r},isHidden:{value:n},hiddenProperty:{value:a&&a.hiddenProperty},stateProperty:{value:a&&a.stateProperty},changeEvent:{value:a&&a.changeEvent}}))}(),Fullscreen=function(){function e(e){var t=e||document.documentElement;return t===document.documentElement&&("msRequestFullscreen"===f.requestFn||Browser.isOpera&&Browser.operaVersion<15)&&(t=document.body),t}function t(){return f}function r(){return(f||null)&&document[f.element]}function n(){return Boolean(f&&document[f.isEnabled])}function a(){return Boolean(f&&document[f.element])}function i(t,r){var n=this;if(!f)return Promise.reject(new Error("fullscreen not supported"));var i=e(r);if("function"!=typeof i[f.requestFn])return Promise.reject(new Error("fullscreen not supported"));if(a())return Promise.resolve();if(p())return i[f.requestFn](t);var o=".Fullscreen_requestFullscreen";return new Promise(function(e,r){jQuery(i).off(o).one(""+f.errorEvent+o+" "+f.changeEvent+o,function(t){jQuery(n).off(o),t.type===f.errorEvent?r(new Error("unknown fullscreen request error")):e()}),i[f.requestFn](t)})}function o(){var e=this;if(!f||"function"!=typeof document[f.exitFn])return Promise.reject(new TypeError("fullscreen not supported"));if(!a())return Promise.reject(new TypeError("fullscreen mode not active"));if(p())return document[f.exitFn]();var t=".Fullscreen_exitFullscreen";return new Promise(function(r,n){jQuery(document).off(t).one(""+f.errorEvent+t+" "+f.changeEvent+t,function(a){jQuery(e).off(t),a.type===f.errorEvent?n(new Error("unknown fullscreen exit error")):r()}),document[f.exitFn]()})}function s(e,t){return a()?o():i(e,t)}function u(t,r){if(f){var n=e(r);$(n).on(f.changeEvent,t)}}function l(t,r){if(f){var n=e(r);t?$(n).off(f.changeEvent,t):$(n).off(f.changeEvent)}}function c(t,r){if(f){var n=e(r);$(n).on(f.errorEvent,t)}}function d(t,r){if(f){var n=e(r);t?$(n).off(f.errorEvent,t):$(n).off(f.errorEvent)}}var f=function(){try{return Object.freeze([{isEnabled:"fullscreenEnabled",element:"fullscreenElement",requestFn:"requestFullscreen",exitFn:"exitFullscreen",changeEvent:"fullscreenchange",errorEvent:"fullscreenerror"},{isEnabled:"webkitFullscreenEnabled",element:"webkitFullscreenElement",requestFn:"webkitRequestFullscreen",exitFn:"webkitExitFullscreen",changeEvent:"webkitfullscreenchange",errorEvent:"webkitfullscreenerror"},{isEnabled:"mozFullScreenEnabled",element:"mozFullScreenElement",requestFn:"mozRequestFullScreen",exitFn:"mozCancelFullScreen",changeEvent:"mozfullscreenchange",errorEvent:"mozfullscreenerror"},{isEnabled:"msFullscreenEnabled",element:"msFullscreenElement",requestFn:"msRequestFullscreen",exitFn:"msExitFullscreen",changeEvent:"MSFullscreenChange",errorEvent:"MSFullscreenError"}].find(function(e){return e.isEnabled in document}))}catch(e){}return undefined}(),p=function(){function e(){if(null!==t)return t;if(t=!1,f)try{var e=document.exitFullscreen();e.catch(function(){}),t=e instanceof Promise}catch(e){}return t}var t=null;return e}();return Object.freeze(Object.defineProperties({},{vendor:{get:t},element:{get:r},isEnabled:{value:n},isFullscreen:{value:a},request:{value:i},exit:{value:o},toggle:{value:s},onChange:{value:u},offChange:{value:l},onError:{value:c},offError:{value:d}}))}(),_ref3=function(){function e(e){for(var t=e.cloneNode(!0),r=document.createDocumentFragment(),n=void 0;null!==(n=t.firstChild);){if(n.nodeType===Node.ELEMENT_NODE)switch(n.nodeName.toUpperCase()){case"BR":case"DIV":case"P":r.appendChild(document.createTextNode(" "))}r.appendChild(n)}return r.textContent}function t(e){if("object"!==(void 0===e?"undefined":_typeof(e))||null===e)return e;if(e instanceof String)return String(e);if(e instanceof Number)return Number(e);if(e instanceof Boolean)return Boolean(e)

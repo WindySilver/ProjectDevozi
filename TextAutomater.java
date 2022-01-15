@@ -1,6 +1,6 @@
 public class Main {
   public static void main(String[] args) {
-    WriteDatabase(21,72);
+    WriteUpdate(1,72);
 }
 
 public static void WriteHeals(int start, int end)
@@ -42,4 +42,11 @@ public static void WriteDatabase(int start, int end)
     System.out.println("<<set $DevozSlot"+i+" to $emptyDevozSlot>>");
   }
 }
+
+public static void WriteUpdate(int start, int end){
+    for(int i = start;i<end;i++){
+        System.out.println("<<elseif $DevozSlot"+i+".id is $updatehelper.id>><<set $DevozSlot"+i+" to $updatehelper>>");
+    }
+}
+
 }
