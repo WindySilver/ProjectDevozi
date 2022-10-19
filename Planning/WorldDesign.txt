@@ -16,9 +16,9 @@ Route 3: Goes along the coast, making it an excellent place for Water-type Devoz
 
 Empyra City (etymology: empyreal): Has walls meant to keep the lava from the nearby volcano out of the city in case of an eruption. Its main products are handcrafts (such as pottery) and education, as it hosts the Vocation Academy, the hub for vocational studies. Hosts the Fire-type gym. When you arrive, the chief is busy with something (maybe battling your rival) and directs you to cut through Route 4 to go challenge the Fruta Gym.
 
-Route 4: Between Fruta City and Fruta City. Rather hazardous due to its dryness - partly caused by a colony of Fire-type Devozi livin in the area - although it is a far safer place to catch Fire-types than Route 5. You can also encounter some Earth-type Devozi along the way.
+Route 4: Between Fruta City and Empyra City. Rather hazardous due to its dryness - partly caused by a colony of Fire-type Devozi livin in the area - although it is a far safer place to catch Fire-types than Route 5. You can also encounter some Earth-type Devozi along the way.
 
-Route 5: Initially blocked by a group of researchers who have suspicions that the nearby volcano, Lacano (etymology: lava, volcano), might start erupting soon. The main path goes around the volcano, but even the normal path through is rather dangerous due to the heat and occasional ash falling. Cutting through the volcano is, naturally, extremely and should only be done by experts with properly trained Fire-type Devozi. Home to many Fire-types.
+Route 5: Between Empyra City and Gemral City. Initially blocked by a group of researchers who have suspicions that the nearby volcano, Lacano (etymology: lava, volcano), might start erupting soon. The main path goes around the volcano, but even the normal path through is rather dangerous due to the heat and occasional ash falling. Cutting through the volcano is, naturally, extremely dangerous and should only be done by experts with properly trained Fire-type Devozi. Home to many Fire-types.
 
 Gemral City (etymology: gem, mineral): Has a quarry that produces a majority of the region's ore and gemstones. Home to the Earth-type Gym.
 
@@ -28,6 +28,6 @@ Sterrum City (etymology: ferrum, steel): Has the Metal-type Gym. Known for its m
 
 Route 7: Travels near the coast from Sterrum City back to Regenesys City. Home to many Water-type Devozi, much like Route 3. Has a river or two.
 
-Route 8: A barren area that goes from the starting City to Master's Ring. You can sporadically come across a Devoz, but due to pollution from a war that once ravaged the region it's not very habitable.
+Route 8: A barren area that goes from Regenesys City to Master's Ring. You can sporadically come across a Devoz, but due to pollution from a war that once ravaged the region it's not very habitable.
 
 Master's Ring: A Colosseum-like building from long ago where the region's current Master resides. You challenge them there and have the battle videod. If you don't want to, no one will ever see it unless there is a need to check the tapes for foul play. If you're fine with it, however, it will be broadcasted online or, if you schedule so, you will have an open audience. If you defeat the Master, you will take their place and have your name recorded into the Book of Masters.
