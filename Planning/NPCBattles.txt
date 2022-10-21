@@ -1,7 +1,63 @@
 Route 1:
- 
+
 Trainer 0: Zara, level 5 Beginnore (Blade Throw, Buff Up)
 Trainer 1: Ferus, level 6 Rochip (Mud Throw, Buff Up, Wall Up)
 Trainer 2: Timothy, level 7 Graot (Vine Slam, Buff Up, Wall Up and Lighten Up) and level 8 Seeround (Vine Slam, Buff Up, Wall Up and Lighten Up)
 Trainer 3: Greta, level 9 Rippond (Water Spray, Buff Up, Wall Up and Lighten Up)
-Trainer 4: Rival battle, level 10 starter vs. you (beginner attack, Buff Up, either Wall Up or Lighten Up (random), first mid attack)
+Trainer 4: Rival battle, level 10 starter (beginner attack, Buff Up, either Wall Up or Lighten Up (random), first mid attack)
+
+Route 2:
+
+Trainer 0: Mychal, level 12 
+Trainer 1: ??, level 13
+Trainer 2: ??, level 14
+Trainer 3: ??, level 16
+Trainer 4: Rival battle, level 18 starter
+
+Route 3:
+
+Trainer 0: ??, level 21
+Trainer 1: ??, level 23
+Trainer 2: ??, level 24
+Trainer 3: ??, level 25
+Trainer 4: Rival battle, level 27 starter
+
+Route 4:
+
+Trainer 0: ??, level 30
+Trainer 1: ??, level 32
+Trainer 2: ??, level 34
+Trainer 3: ??, level 36
+Trainer 4: Rival battle, level 38 starter
+
+Route 5:
+
+Trainer 0: ??, level 41
+Trainer 1: ??, level 43
+Trainer 2: ??, level 45
+Trainer 3: ??, level 47
+Trainer 4: Rival battle, level 50 starter
+
+Route 6:
+
+Trainer 0: ??, level 53
+Trainer 1: ??, level 56
+Trainer 2: ??, level 58
+Trainer 3: ??, level 61
+Trainer 4: Rival battle, level 64 starter
+
+Route 7:
+
+Trainer 0: ??, level 67
+Trainer 1: ??, level 70
+Trainer 2: ??, level 72
+Trainer 3: ??, level 75
+Trainer 4: Rival battle, level 79 starter
+
+Route 8:
+
+Trainer 0: ??, level 84
+Trainer 1: ??, level 87
+Trainer 2: ??, level 89
+Trainer 3: ??, level 91
+Trainer 4: Rival battle, level 94 starter
