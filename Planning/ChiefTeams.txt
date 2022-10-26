@@ -1,26 +1,45 @@
-Bellwort (prototype, 1st gym (instead of gym 3 as planned)):
+Bellwort (prototype gym 1):
 
 Sreen - lvl 12 - Vine Slam, Buff Up, Wall Up, Trunk Fall
 Vinardy - lvl 12 - Vine Slam, Buff Up, Wall Up, Trunk Fall
 
 Dylan (gym 1) (levels around 20)
 
-
+Swimtle - lvl 18 - Water Spray, Buff Up, Lighten Up, Rapids
+Dleflect - lvl 20 - Water Spray, Buff Up, Lighten Down, Rapids
 
 Ezra (gym 2) (levels around 30)
 
+Burlame - lvl 26 - Cinder Toss, Combustion, Lighten Up, Lighten Down
+Timbire - lvl 28 - Cinder Toss, Combustion, Wall Down, Buff Down
+Charre - lvl 30 - Cinder Toss, Combustion, Buff Up, Wall Down
 
 Bellwort (gym 3) (levels around 40)
 
+Lushora - lvl 38 - Trunk Throw, Plunge, Buff Down, Wall Down
+Bloower - lvl 40 - Trunk Throw, Plunge, Lighten Down, Wall Down
+Taltree - lvl 42 - Growing Slam, Trunk Throw, Plunge, Lighten Up
 
 Swanhild (gym 4) (levels around 50+)
 
-
+Groundound - lvl 46 - Landslide, Ore Punch, Lighten Down, Wall Down
+Dimpth - lvl 48 - Landslide, Buff Down, Wall Down, Lighten Down
+Dimpth - lvl 50 - Landslide, Ore Punch, Ground Smash, Wall Down
+Dunoft - lvl 53 - Rockslide, Landslide, Ore Punch, Ground Smash
 
 Onyx (gym 5) (levels around 65)
 
-
+Sheiny - lvl 62 - Metal Collapse, Beam Slam, Wall Down, Lighten Down
+Sheiny - lvl 64 - Metal Collapse, Beam Slam, Buff Down, Wall Down
+Golig - lvl 66 - Blade Attack, Metal Collapse, Lighten Down, Buff Down
+Iriniumtal - lvl 67 - Metal Collapse, Beam Slam, Wall Down, Lighten Down
+Iriniumtal - lvl 70 - Metal Collapse, Beam Slam, Buff Up, Wall Up
 
 Roshan (Master's Ring) (level 100)
 
-
+Lushora - lvl 100 - Growing Slam, Forested Wrath, Buff Up, Lighten Up
+Naservod - lvl 100 - Forested Wrath, Trunk Throw, Buff Down, Wall Up
+Wafall - lvl 100 - Tsunami, Wave Assault, Lighten Down, Buff Down
+Wildire - lvl 100 - Explosion, Flame Wave, Buff Up, Lighten Up
+Mountaerth - lvl 100 - Landslide, Ore Punch, Lighten Down, Wall Down
+Iriniumtal - lvl 100 - Metal Collapse, Beam Slam, Buff Up, Wall Up
