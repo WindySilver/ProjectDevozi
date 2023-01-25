@@ -389,7 +389,7 @@ You send out $BattleDevoz.name.
 &lt;&lt;if $incomingType is $Earth.sup1 || $incomingType is $Earth.sup2&gt;&gt;&lt;&lt;set $multiplier to 2&gt;&gt;&lt;&lt;elseif $incomingType is $Earth.wea1 || $incomingType is $Earth.wea2&gt;&gt;&lt;&lt;set $multiplier to 0.5&gt;&gt;&lt;&lt;/if&gt;&gt;
 &lt;&lt;elseif $receivingType is &quot;Metal&quot;&gt;&gt;
 &lt;&lt;if $incomingType is $Metal.sup1 || $incomingType is $Metal.sup2&gt;&gt;&lt;&lt;set $multiplier to 2&gt;&gt;&lt;&lt;elseif $incomingType is $Metal.wea1 || $incomingType is $Metal.wea2&gt;&gt;&lt;&lt;set $multiplier to 0.5&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;else&gt;&gt;&lt;&lt;set $multiplier to 1&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Head to the nearest Healing Station" tags="" position="619,426" size="100,100">&lt;&lt;include &quot;Afterbattle Update&quot;&gt;&gt;&lt;&lt;set $gymbattle to false&gt;&gt;&lt;&lt;set $Battling to false&gt;&gt;&lt;&lt;if $location is &quot;firstBattle&quot;&gt;&gt;&lt;&lt;include Map&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $location to $nearestHealing&gt;&gt;&lt;&lt;set $arrival to $nearestHealing&gt;&gt;&lt;&lt;include &quot;Healing Station&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Map" tags="" position="1111,467" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $lookdatabase to false&gt;&gt;&lt;&lt;if $location is &quot;firstBattle&quot;&gt;&gt;$rivalname: Wow, that was awesome!&lt;br&gt;&lt;br&gt;
+&lt;&lt;else&gt;&gt;&lt;&lt;set $multiplier to 1&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Head to the nearest Healing Station" tags="" position="619,426" size="100,100">&lt;&lt;include &quot;Afterbattle Update&quot;&gt;&gt;&lt;&lt;set $gymbattle to false&gt;&gt;&lt;&lt;set $Battling to false&gt;&gt;&lt;&lt;if $location is &quot;firstBattle&quot;&gt;&gt;&lt;&lt;include Map&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;set $location to $nearestHealing&gt;&gt;&lt;&lt;set $arrival to $nearestHealing&gt;&gt;&lt;&lt;include &quot;Healing Station&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="19" name="Map" tags="" position="1110,467" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $lookdatabase to false&gt;&gt;&lt;&lt;if $location is &quot;firstBattle&quot;&gt;&gt;$rivalname: Wow, that was awesome!&lt;br&gt;&lt;br&gt;
 
 Professor Pine, who had been watching your battle from the sidelines, claps.&lt;br&gt;&lt;br&gt;
 
@@ -1029,7 +1029,12 @@ You named your $opposing1.speciesname to $opposing1.name.&lt;&lt;/linkappend&gt;
 &lt;&lt;elseif $devozId is 69&gt;&gt;&lt;&lt;set $DevozSlot69 to $opposing1&gt;&gt;
 &lt;&lt;elseif $devozId is 70&gt;&gt;&lt;&lt;set $DevozSlot70 to $opposing1&gt;&gt;
 &lt;&lt;elseif $devozId is 71&gt;&gt;&lt;&lt;set $DevozSlot71 to $opposing1&gt;&gt;&lt;&lt;/if&gt;&gt;
-&lt;&lt;set $devozId += 1&gt;&gt;&lt;&lt;if $devozId &gt; $maxstorage&gt;&gt;&lt;br&gt;&lt;br&gt;Your storage is full! If you want to catch more Devozi, you need to release some of your pre-existing ones!&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Gym" tags="" position="1312,605" size="100,100">&lt;&lt;if $nearestHealing is &quot;Fruta&quot;&gt;&gt;&lt;&lt;if $VictoryAmulets.Fruta is true&gt;&gt;Bellwort: Oh, hello $name.
+&lt;&lt;set $devozId += 1&gt;&gt;&lt;&lt;if $devozId &gt; $maxstorage&gt;&gt;&lt;br&gt;&lt;br&gt;Your storage is full! If you want to catch more Devozi, you need to release some of your pre-existing ones!&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Gym" tags="" position="1311,604" size="100,100">&lt;&lt;if $nearestHealing is &quot;Fruta&quot;&gt;&gt;&lt;&lt;if $VictoryAmulets.Oasla is false&gt;&gt;When you enter the gym, a young lady looks up from her book.
+The young lady: Welcome. If you&#39;re looking for Bellwort, she&#39;s not around. It&#39;s probably going to take some more time, so you should head to Oasla City. Go to Harport Town via Route 2 and take a ferry there.
+
+Looks like you should leave and do as the young lady says.
+
+[[Leave the gym|Map]]&lt;&lt;elseif $VictoryAmulets.Fruta is true&gt;&gt;Bellwort: Oh, hello $name.
 
 Bellwort: If you haven&#39;t visited the orchard yet, please do so before you head further. They are worth the time, I promise!
 
@@ -1037,9 +1042,37 @@ Bellwort: If you haven&#39;t visited the orchard yet, please do so before you he
 
 Bellwort: Another challenger? Man, what a day... Well, come at me with all you&#39;ve got, I guess.
 
-&lt;&lt;set $gymbattle to true&gt;&gt;&lt;&lt;set $opposing1 to $Sreen&gt;&gt;&lt;&lt;set $opposing2 to $Vinardy&gt;&gt;&lt;&lt;set $opponent to &quot;Fruta Chief Bellwort&quot;&gt;&gt;&lt;&lt;set $opponentDevoz to 2&gt;&gt;&lt;&lt;nobr&gt;&gt;
+Bellwort: You&#39;ve got two amulets already? Guess I need to crank up the power then.
 
-&lt;&lt;set $opponentLevel to 12&gt;&gt;&lt;&lt;include &quot;Set opponent stats&quot;&gt;&gt;&lt;&lt;set _opp1 to $opposing1&gt;&gt;&lt;&lt;set $opposing1 to $opposing2&gt;&gt;&lt;&lt;include &quot;Set opponent stats&quot;&gt;&gt;&lt;&lt;set $opposing2 to $opposing1&gt;&gt;&lt;&lt;set $opposing1 to _opp1&gt;&gt;&lt;&lt;set $opponentDevozi to 2&gt;&gt;&lt;&lt;/nobr&gt;&gt;
+&lt;&lt;nobr&gt;&gt;&lt;&lt;set $gymbattle to true&gt;&gt;
+&lt;&lt;set $opposing1 to $Lushora&gt;&gt;&lt;&lt;set $opposing1.move1 to $TrunkThrow&gt;&gt;&lt;&lt;set $opposing1.move2 to $Plunge&gt;&gt;&lt;&lt;set $opposing1.move3 to $BuffDown&gt;&gt;&lt;&lt;set $opposing1.move4 to $WallDown&gt;&gt;
+&lt;&lt;set $opposing2 to $Bloower&gt;&gt;&lt;&lt;set $opposing2.move1 to $TrunkThrow&gt;&gt;&lt;&lt;set $opposing2.move2 to $Plunge&gt;&gt;&lt;&lt;set $opposing2.move3 to $LightenDown&gt;&gt;&lt;&lt;set $opposing2.move4 to $WallDown&gt;&gt;
+&lt;&lt;set $opposing3 to $Taltree&gt;&gt;&lt;&lt;set $opposing3.move1 to $GrowingSlam&gt;&gt;&lt;&lt;set $opposing3.move2 to $TrunkThrow&gt;&gt;&lt;&lt;set $opposing3.move3 to $Plunge&gt;&gt;&lt;&lt;set $opposing3.move4 to $LightenUp&gt;&gt;
+&lt;&lt;set $opponent to &quot;Fruta Chief Bellwort&quot;&gt;&gt;
+&lt;&lt;set $opponentDevoz to 3&gt;&gt;
+
+&lt;&lt;set $opponentLevel to 38&gt;&gt;&lt;&lt;set $setOpposing to $opposing1&gt;&gt;&lt;&lt;include &quot;Set opponent stats&quot;&gt;&gt;&lt;&lt;set $opposing1 to $setOpposing&gt;&gt;
+&lt;&lt;set $opponentLevel to 40&gt;&gt;&lt;&lt;set $setOpposing to $opposing2&gt;&gt;&lt;&lt;include &quot;Set opponent stats&quot;&gt;&gt;&lt;&lt;set $opposing2 to $setOpposing&gt;&gt;
+&lt;&lt;set $opponentLevel to 42&gt;&gt;&lt;&lt;set $setOpposing to $opposing3&gt;&gt;&lt;&lt;include &quot;Set opponent stats&quot;&gt;&gt;&lt;&lt;set $opposing3 to $setOpposing&gt;&gt;&lt;&lt;set $opponentDevozi to 3&gt;&gt;&lt;&lt;/nobr&gt;&gt;
+
+&lt;&lt;include &quot;Battle start&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;elseif $nearestHealing is &quot;Oasla&quot;&gt;&gt;&lt;&lt;if $VictoryAmulets.Oasla is true&gt;&gt;Dylan: Good afternoon, $name! Great to see you!
+
+Dylan: I know it&#39;s not everyone&#39;s cup of tea, but I recommend giving diving here in Oasla a shot. The underwater world looks amazing.
+
+[[Leave the gym|Map]]&lt;&lt;else&gt;&gt;&lt;&lt;set $canflee to true&gt;&gt;When you get to the gym, the Gym Chief, Dylan, is waiting for you.
+
+Dylan: Hi there! You here to challenge me? Cool! I&#39;m always up for a challenge.
+
+Dylan: So, I&#39;m your first Gym Chief? Alright then, I&#39;ll scale up my team accordingly. Don&#39;t expect me to go easy on you, though!
+
+&lt;&lt;nobr&gt;&gt;&lt;&lt;set $gymbattle to true&gt;&gt;
+&lt;&lt;set $opposing1 to $Swimtle&gt;&gt;&lt;&lt;set $opposing1.move1 to $WaterSpray&gt;&gt;&lt;&lt;set $opposing1.move2 to $BuffUp&gt;&gt;&lt;&lt;set $opposing1.move3 to $LightenUp&gt;&gt;&lt;&lt;set $opposing1.move4 to $Rapids&gt;&gt;
+&lt;&lt;set $opposing2 to $Dleflect&gt;&gt;&lt;&lt;set $opposing2.move1 to $WaterSpray&gt;&gt;&lt;&lt;set $opposing2.move2 to $BuffUp&gt;&gt;&lt;&lt;set $opposing2.move3 to $LightenDown&gt;&gt;&lt;&lt;set $opposing2.move4 to $Rapids&gt;&gt;
+&lt;&lt;set $opponent to &quot;Fruta Chief Dylan&quot;&gt;&gt;
+&lt;&lt;set $opponentDevoz to 2&gt;&gt;
+
+&lt;&lt;set $opponentLevel to 18&gt;&gt;&lt;&lt;set $setOpposing to $opposing1&gt;&gt;&lt;&lt;include &quot;Set opponent stats&quot;&gt;&gt;&lt;&lt;set $opposing1 to $setOpposing&gt;&gt;
+&lt;&lt;set $opponentLevel to 20&gt;&gt;&lt;&lt;set $setOpposing to $opposing2&gt;&gt;&lt;&lt;include &quot;Set opponent stats&quot;&gt;&gt;&lt;&lt;set $opposing2 to $setOpposing&gt;&gt;&lt;&lt;set $opponentDevozi to 2&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 
 &lt;&lt;include &quot;Battle start&quot;&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;else&gt;&gt;Gym unavailable. [[Go back|Map]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Gym victory" tags="" position="916,698" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;if $nearestHealing is &quot;Fruta&quot;&gt;&gt;&lt;&lt;set $VictoryAmulets.Fruta to true&gt;&gt;Bellwort: Congratulations on your victory! Here is Fruta Gym&#39;s victory amulet.&lt;br&gt;&lt;br&gt;You received the Fruta Gym victory amulet and put it into the victory amulet case.&lt;br&gt;&lt;br&gt;Bellwort: If you haven&#39;t visited the orchard yet, please do so before you head further. They are worth the time, I promise!
 &lt;&lt;elseif $nearestHealing is &quot;Oasla&quot;&gt;&gt;&lt;&lt;set $VictoryAmulets.Oasla to true&gt;&gt;Oasla victory text here
@@ -1354,7 +1387,7 @@ Done!&lt;br&gt;&lt;br&gt;
 Done!
 
 [[Reload|Select from Devozi Storage]]
-[[Leave|Change Team Composition]]</tw-passagedata><tw-passagedata pid="47" name="Set opponent stats" tags="" position="1190,31" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $opposing1.level to $opponentLevel&gt;&gt;&lt;&lt;set $opposing1.hp to  $opposing1.hp+$opponentLevel&gt;&gt;&lt;&lt;set $opposing1.maxhp to $opposing1.maxhp+$opponentLevel&gt;&gt;&lt;&lt;set $opposing1.attack to $opposing1.attack+$opponentLevel&gt;&gt;&lt;&lt;set $opposing1.defense to $opposing1.defense+$opponentLevel&gt;&gt;&lt;&lt;set $opposing1.speed to $opposing1.speed+$opponentLevel&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Check new move" tags="" position="612,1324" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set _newMove to $nullMove&gt;&gt;&lt;&lt;if $BattleDevoz.level is 6&gt;&gt;&lt;&lt;set $BattleDevoz.move3 to $WallUp&gt;&gt;$BattleDevoz.name learned $WallUp.name!
+[[Leave|Change Team Composition]]</tw-passagedata><tw-passagedata pid="47" name="Set opponent stats" tags="" position="1190,31" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $setOpposing.level to $opponentLevel&gt;&gt;&lt;&lt;set $setOpposing.hp to  $setOpposing.hp+$opponentLevel&gt;&gt;&lt;&lt;set $setOpposing.maxhp to $setOpposing.maxhp+$opponentLevel&gt;&gt;&lt;&lt;set $setOpposing.attack to $setOpposing.attack+$opponentLevel&gt;&gt;&lt;&lt;set $setOpposing.defense to $setOpposing.defense+$opponentLevel&gt;&gt;&lt;&lt;set $setOpposing.speed to $setOpposing.speed+$opponentLevel&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Check new move" tags="" position="612,1324" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set _newMove to $nullMove&gt;&gt;&lt;&lt;if $BattleDevoz.level is 6&gt;&gt;&lt;&lt;set $BattleDevoz.move3 to $WallUp&gt;&gt;$BattleDevoz.name learned $WallUp.name!
 &lt;&lt;elseif $BattleDevoz.level is 8&gt;&gt;&lt;&lt;set $BattleDevoz.move4 to $LightenUp&gt;&gt;$BattleDevoz.name learned $LightenUp.name!
 &lt;&lt;elseif $BattleDevoz.level is 10&gt;&gt;
 &lt;&lt;if $BattleDevoz.type is &quot;Wood&quot;&gt;&gt;&lt;&lt;set _newMove to $TrunkFall &gt;&gt;
@@ -2029,7 +2062,7 @@ There is nothing to do right now, so you should leave.
 
 [[Sterrum City|Map]]</tw-passagedata><tw-passagedata pid="88" name="Route 7" tags="" position="1565,161" size="100,100">&lt;&lt;set $location to &quot;Route 7&quot;&gt;&gt;&lt;&lt;include &quot;Map&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="89" name="Master&#39;s Ring" tags="" position="1724,410" size="100,100">&lt;&lt;set $nearestHealing to &quot;Ring&quot;&gt;&gt;&lt;&lt;set $arrival to &quot;Ring&quot;&gt;&gt;&lt;&lt;set $RouteSteps to 0&gt;&gt;&lt;&lt;set $location to &quot;Masters Ring&quot;&gt;&gt;&lt;&lt;include &quot;Map&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="90" name="Ring Battle" tags="" position="1831,604" size="100,100">The Master battle is currently available.
 
-[[Return|Map]]</tw-passagedata><tw-passagedata pid="91" name="Oasla City" tags="" position="1700,289.5" size="100,100">&lt;&lt;set $nearestHealing to &quot;Oasla&quot;&gt;&gt;&lt;&lt;set $arrival to &quot;Oasla&quot;&gt;&gt;&lt;&lt;set $RouteSteps to 0&gt;&gt;&lt;&lt;set $location to &quot;Oasla City&quot;&gt;&gt;&lt;&lt;include &quot;Map&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="Fruta Orchards" tags="" position="1441,741" size="100,100">You are at the Fruta Orchards. There are more trees than you care to count.
+[[Return|Map]]</tw-passagedata><tw-passagedata pid="91" name="Oasla City" tags="" position="1700,289" size="100,100">&lt;&lt;set $nearestHealing to &quot;Oasla&quot;&gt;&gt;&lt;&lt;set $arrival to &quot;Oasla&quot;&gt;&gt;&lt;&lt;set $RouteSteps to 0&gt;&gt;&lt;&lt;set $location to &quot;Oasla City&quot;&gt;&gt;&lt;&lt;include &quot;Map&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="92" name="Fruta Orchards" tags="" position="1441,741" size="100,100">You are at the Fruta Orchards. There are more trees than you care to count.
 
 There is nothing to do right now, so you should leave.
 
